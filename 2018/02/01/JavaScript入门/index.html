@@ -84,14 +84,14 @@
 <meta name="description" content="JavaScript入门(基础学习总结)">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pageJavaScript入门">
+<meta property="og:title" content="JavaScript入门">
 <meta property="og:url" content="https://sollylee.github.io/2018/02/01/JavaScript入门/index.html">
 <meta property="og:site_name" content="LISILE&#39;s Notes">
 <meta property="og:description" content="JavaScript入门(基础学习总结)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-01T11:21:10.045Z">
+<meta property="og:updated_time" content="2018-02-01T11:26:41.790Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pageJavaScript入门">
+<meta name="twitter:title" content="JavaScript入门">
 <meta name="twitter:description" content="JavaScript入门(基础学习总结)">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>pageJavaScript入门 | LISILE's Notes</title>
+  <title>JavaScript入门 | LISILE's Notes</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">pageJavaScript入门</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript入门</h1>
         
 
         <div class="post-meta">
@@ -357,25 +357,25 @@
 
       
         <p>JavaScript入门(基础学习总结)<br><a id="more"></a></p>
-<h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><h2 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h2><p>一行的结束就被认定为语句的结束，通常在结尾加上一个分号”;”来表示语句的结束。</p>
+<h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h3><p>一行的结束就被认定为语句的结束，通常在结尾加上一个分号”;”来表示语句的结束。</p>
 <p>javascript作为一种脚本语言可以放在html页面中任何位置。<br>但浏览器解释html时是按先后顺序的，所以前面的script就先被执行。<br>比如进行页面显示初始化的js必须放在head里面,<br>因为初始化都要求提前进行(如给页面body设置css等);<br>而如果是通过事件调用执行的function那么对位置没什么要求的。</p>
-<h2 id="js文件引用"><a href="#js文件引用" class="headerlink" title="js文件引用"></a>js文件引用</h2><pre><code>&lt;script src=&quot;文件名&quot;&gt;&lt;/script&gt;
-</code></pre><h2 id="js注释"><a href="#js注释" class="headerlink" title="js注释"></a>js注释</h2><pre><code>//   注释一行
+<h3 id="js文件引用"><a href="#js文件引用" class="headerlink" title="js文件引用"></a>js文件引用</h3><pre><code>&lt;script src=&quot;文件名&quot;&gt;&lt;/script&gt;
+</code></pre><h3 id="js注释"><a href="#js注释" class="headerlink" title="js注释"></a>js注释</h3><pre><code>//   注释一行
 /**/ 注释多行
-</code></pre><h2 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h2><pre><code>var 变量名;
+</code></pre><h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><pre><code>var 变量名;
 </code></pre><p>注意:</p>
 <pre><code>1. 变量名必须以下划线&apos;_&apos;、英文字母或美元符号&apos;$&apos;开始.
 2. 变量名可以使用任意多个英文字母，数字，下划线，或者美元符号组成
 3. 变量名不能使用JavaScript关键词和JavaScript保留字
-</code></pre><h2 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h2><pre><code>function 函数名()
+</code></pre><h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><pre><code>function 函数名()
 {
     函数代码;
 }
-</code></pre><h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><pre><code>if(条件)
+</code></pre><h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><pre><code>if(条件)
 { 条件成立时执行的代码 }
 else
 { 条件不成立时执行的代码 }
-</code></pre><h2 id="输出内容-document-write"><a href="#输出内容-document-write" class="headerlink" title="输出内容(document.write())"></a>输出内容(document.write())</h2><p>第一种:输出内容用””括起，直接输出””号内的内容。</p>
+</code></pre><h3 id="输出内容-document-write"><a href="#输出内容-document-write" class="headerlink" title="输出内容(document.write())"></a>输出内容(document.write())</h3><p>第一种:输出内容用””括起，直接输出””号内的内容。</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
   document.write(&quot;I love JavaScript！&quot;); //内容用&quot;&quot;括起来，&quot;&quot;里的内容直接输出。
 &lt;/script&gt;
@@ -397,17 +397,17 @@ document.write(mystr+&quot;&lt;br&gt;&quot;);//输出hello后，输出一个换�
   document.write(&quot;JavaScript&quot;);
 &lt;/script&gt;
 </code></pre><p> 输出时，加上“white-space:pre”(空白会被浏览器保留)样式，<br> 可以输出空格。</p>
-<h3 id="常用互动语法"><a href="#常用互动语法" class="headerlink" title="常用互动语法"></a>常用互动语法</h3><h2 id="js-警告"><a href="#js-警告" class="headerlink" title="js-警告"></a>js-警告</h2><pre><code>alert(字符串);
+<h2 id="常用互动语法"><a href="#常用互动语法" class="headerlink" title="常用互动语法"></a>常用互动语法</h2><h3 id="js-警告"><a href="#js-警告" class="headerlink" title="js-警告"></a>js-警告</h3><pre><code>alert(字符串);
 </code></pre><p>alert 弹出消息对话框(包含一个确定按钮)。</p>
-<h2 id="js-确定-confirm消息对话框"><a href="#js-确定-confirm消息对话框" class="headerlink" title="js-确定(confirm消息对话框)"></a>js-确定(confirm消息对话框)</h2><pre><code>confirm(str);
+<h3 id="js-确定-confirm消息对话框"><a href="#js-确定-confirm消息对话框" class="headerlink" title="js-确定(confirm消息对话框)"></a>js-确定(confirm消息对话框)</h3><pre><code>confirm(str);
 </code></pre><p>str:在消息对话框中要显示的文本</p>
 <p>返回值:<br>        按下“确定”，返回true<br>        按下“取消”，返回false</p>
 <p>返回值用于判断语句。</p>
-<h2 id="js-提问-prompt"><a href="#js-提问-prompt" class="headerlink" title="js-提问(prompt)"></a>js-提问(prompt)</h2><pre><code>prompt(str1,str2);
+<h3 id="js-提问-prompt"><a href="#js-提问-prompt" class="headerlink" title="js-提问(prompt)"></a>js-提问(prompt)</h3><pre><code>prompt(str1,str2);
 </code></pre><p>str1:要显示在消息对话框中的文本，不可修改</p>
 <p>str2:文本框的内容，可以修改</p>
 <p>返回值：<br>        点击确定，文本框中的内容作为返回值<br>        点击取消，返回null</p>
-<h2 id="js-打开新窗口-window-open"><a href="#js-打开新窗口-window-open" class="headerlink" title="js-打开新窗口(window.open)"></a>js-打开新窗口(window.open)</h2><pre><code>window.open([URl],[窗口名称],[参数字符串])
+<h3 id="js-打开新窗口-window-open"><a href="#js-打开新窗口-window-open" class="headerlink" title="js-打开新窗口(window.open)"></a>js-打开新窗口(window.open)</h3><pre><code>window.open([URl],[窗口名称],[参数字符串])
 </code></pre><p>URL：可选参数，在窗口中要显示网页的网址或路径。<br>如果省略这个参数，或者它的值是空字符串，那么窗口就不显示任何文档。</p>
 <p>窗口名称：可选参数，被打开窗口的名称。</p>
 <p>注意：<br>    1.该名称由字母、数字和下划线字符组成。</p>
@@ -430,24 +430,24 @@ menubar      yes/no             窗口有没有菜单
 toolbar      yes/no             窗口有没有工具条
 scrollbars   yes/no             窗口有没有滚动条
 status       yes/no             窗口有没有状态栏
-</code></pre><h2 id="js-关闭窗口-window-close"><a href="#js-关闭窗口-window-close" class="headerlink" title="js-关闭窗口(window.close)"></a>js-关闭窗口(window.close)</h2><pre><code>window.close;//关闭本窗口
+</code></pre><h3 id="js-关闭窗口-window-close"><a href="#js-关闭窗口-window-close" class="headerlink" title="js-关闭窗口(window.close)"></a>js-关闭窗口(window.close)</h3><pre><code>window.close;//关闭本窗口
 </code></pre><p>或<br>    &lt;窗口对象&gt;.close();<br>    //关闭指定窗口</p>
-<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><p>文档对象模型DOM（Document Object Model）<br>定义访问和处理HTML文档的标准方法。<br>DOM 将HTML文档呈现为带有元素、属性和文本的树结构(节点树)</p>
+<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><p>文档对象模型DOM（Document Object Model）<br>定义访问和处理HTML文档的标准方法。<br>DOM 将HTML文档呈现为带有元素、属性和文本的树结构(节点树)</p>
 <p>元素节点：<html> <body> <p> 等标签</p>
 <p>文本节点：向用户展示的内容,如<li>间的文本</li></p>
 <p>属性节点: 元素属性，如<a>标签的链接属性 herf=””</a></p>
-<h2 id="获取id"><a href="#获取id" class="headerlink" title="获取id"></a>获取id</h2><pre><code>document.getElementById(&quot;id&quot;)
+<h3 id="获取id"><a href="#获取id" class="headerlink" title="获取id"></a>获取id</h3><pre><code>document.getElementById(&quot;id&quot;)
 </code></pre><p>以变量接取，var i=document.getElementById(“id”);</p>
-<h2 id="innerHTML属性"><a href="#innerHTML属性" class="headerlink" title="innerHTML属性"></a>innerHTML属性</h2><p>innerHTML(区分大小写)属性用于获取或替换HTML元素的内容</p>
+<h3 id="innerHTML属性"><a href="#innerHTML属性" class="headerlink" title="innerHTML属性"></a>innerHTML属性</h3><p>innerHTML(区分大小写)属性用于获取或替换HTML元素的内容</p>
 <pre><code>object.innerHTML
 //object为获取的对象，下同
 </code></pre><p>eg:<br>    &lt; p id=”con”&gt;xxxxxx&lt; /p &gt;<br>    var i=document.getElementById(“con”);<br>    i.innerHTML=”hello world” //修改p中的内容为”hello world”</p>
-<h2 id="改变HTML样式"><a href="#改变HTML样式" class="headerlink" title="改变HTML样式"></a>改变HTML样式</h2><pre><code>object.style.display=&quot;value&quot;;
+<h3 id="改变HTML样式"><a href="#改变HTML样式" class="headerlink" title="改变HTML样式"></a>改变HTML样式</h3><pre><code>object.style.display=&quot;value&quot;;
 </code></pre><p>value:<br>    none   此元素不会被显示(隐藏)</p>
 <pre><code>block  此元素将显示为块级元素(显示)
-</code></pre><h2 id="控制类名-className属性"><a href="#控制类名-className属性" class="headerlink" title="控制类名(className属性)"></a>控制类名(className属性)</h2><pre><code>object.className=classname;
+</code></pre><h3 id="控制类名-className属性"><a href="#控制类名-className属性" class="headerlink" title="控制类名(className属性)"></a>控制类名(className属性)</h3><pre><code>object.className=classname;
 </code></pre><p>作用：<br>    1.获取元素的class属性<br>    2.为网页内的某个元素指定一个css样式来改变外观</p>
-<h2 id="取消获取的样式"><a href="#取消获取的样式" class="headerlink" title="取消获取的样式"></a>取消获取的样式</h2><pre><code>1. object.removeAttribute(&quot;style&quot;);
+<h3 id="取消获取的样式"><a href="#取消获取的样式" class="headerlink" title="取消获取的样式"></a>取消获取的样式</h3><pre><code>1. object.removeAttribute(&quot;style&quot;);
 
 2. object.style=null;
 
@@ -659,7 +659,7 @@ status       yes/no             窗口有没有状态栏
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础语法"><span class="nav-number">1.</span> <span class="nav-text">基础语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本规则"><span class="nav-number"></span> <span class="nav-text">基本规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js文件引用"><span class="nav-number"></span> <span class="nav-text">js文件引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js注释"><span class="nav-number"></span> <span class="nav-text">js注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义变量"><span class="nav-number"></span> <span class="nav-text">定义变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义函数"><span class="nav-number"></span> <span class="nav-text">定义函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件语句"><span class="nav-number"></span> <span class="nav-text">条件语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出内容-document-write"><span class="nav-number"></span> <span class="nav-text">输出内容(document.write())</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用互动语法"><span class="nav-number">1.</span> <span class="nav-text">常用互动语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-警告"><span class="nav-number"></span> <span class="nav-text">js-警告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-确定-confirm消息对话框"><span class="nav-number"></span> <span class="nav-text">js-确定(confirm消息对话框)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-提问-prompt"><span class="nav-number"></span> <span class="nav-text">js-提问(prompt)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-打开新窗口-window-open"><span class="nav-number"></span> <span class="nav-text">js-打开新窗口(window.open)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-关闭窗口-window-close"><span class="nav-number"></span> <span class="nav-text">js-关闭窗口(window.close)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM"><span class="nav-number">1.</span> <span class="nav-text">DOM</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取id"><span class="nav-number"></span> <span class="nav-text">获取id</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#innerHTML属性"><span class="nav-number"></span> <span class="nav-text">innerHTML属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改变HTML样式"><span class="nav-number"></span> <span class="nav-text">改变HTML样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制类名-className属性"><span class="nav-number"></span> <span class="nav-text">控制类名(className属性)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取消获取的样式"><span class="nav-number"></span> <span class="nav-text">取消获取的样式</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础语法"><span class="nav-number">1.</span> <span class="nav-text">基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本规则"><span class="nav-number">1.1.</span> <span class="nav-text">基本规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js文件引用"><span class="nav-number">1.2.</span> <span class="nav-text">js文件引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js注释"><span class="nav-number">1.3.</span> <span class="nav-text">js注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义变量"><span class="nav-number">1.4.</span> <span class="nav-text">定义变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义函数"><span class="nav-number">1.5.</span> <span class="nav-text">定义函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件语句"><span class="nav-number">1.6.</span> <span class="nav-text">条件语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出内容-document-write"><span class="nav-number">1.7.</span> <span class="nav-text">输出内容(document.write())</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用互动语法"><span class="nav-number">2.</span> <span class="nav-text">常用互动语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#js-警告"><span class="nav-number">2.1.</span> <span class="nav-text">js-警告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-确定-confirm消息对话框"><span class="nav-number">2.2.</span> <span class="nav-text">js-确定(confirm消息对话框)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-提问-prompt"><span class="nav-number">2.3.</span> <span class="nav-text">js-提问(prompt)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-打开新窗口-window-open"><span class="nav-number">2.4.</span> <span class="nav-text">js-打开新窗口(window.open)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-关闭窗口-window-close"><span class="nav-number">2.5.</span> <span class="nav-text">js-关闭窗口(window.close)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM"><span class="nav-number">3.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取id"><span class="nav-number">3.1.</span> <span class="nav-text">获取id</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#innerHTML属性"><span class="nav-number">3.2.</span> <span class="nav-text">innerHTML属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改变HTML样式"><span class="nav-number">3.3.</span> <span class="nav-text">改变HTML样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制类名-className属性"><span class="nav-number">3.4.</span> <span class="nav-text">控制类名(className属性)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#取消获取的样式"><span class="nav-number">3.5.</span> <span class="nav-text">取消获取的样式</span></a></li></ol></li></ol></div>
             
 
           </div>
