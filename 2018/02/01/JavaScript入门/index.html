@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="前端工具," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="前端工具sublime的使用技巧，从慕课中总结而来">
-<meta name="keywords" content="前端工具">
+<meta name="description" content="JavaScript入门(基础学习总结)">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sublime使用技巧">
-<meta property="og:url" content="https://sollylee.github.io/2018/01/28/sublime使用技巧/index.html">
+<meta property="og:title" content="pageJavaScript入门">
+<meta property="og:url" content="https://sollylee.github.io/2018/02/01/JavaScript入门/index.html">
 <meta property="og:site_name" content="LISILE&#39;s Notes">
-<meta property="og:description" content="前端工具sublime的使用技巧，从慕课中总结而来">
+<meta property="og:description" content="JavaScript入门(基础学习总结)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-01T10:24:13.241Z">
+<meta property="og:updated_time" content="2018-02-01T11:21:10.045Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sublime使用技巧">
-<meta name="twitter:description" content="前端工具sublime的使用技巧，从慕课中总结而来">
+<meta name="twitter:title" content="pageJavaScript入门">
+<meta name="twitter:description" content="JavaScript入门(基础学习总结)">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://sollylee.github.io/2018/01/28/sublime使用技巧/"/>
+  <link rel="canonical" href="https://sollylee.github.io/2018/02/01/JavaScript入门/"/>
 
 
 
 
 
-  <title>sublime使用技巧 | LISILE's Notes</title>
+  <title>pageJavaScript入门 | LISILE's Notes</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sollylee.github.io/sollylee.github.io/2018/01/28/sublime使用技巧/">
+    <link itemprop="mainEntityOfPage" href="https://sollylee.github.io/sollylee.github.io/2018/02/01/JavaScript入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Solly Lee">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">sublime使用技巧</h1>
+          <h1 class="post-title" itemprop="name headline">pageJavaScript入门</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-28T09:42:37+08:00">
-                2018-01-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T17:10:28+08:00">
+                2018-02-01
               </time>
             
 
@@ -356,137 +356,103 @@
       
 
       
-        <p>前端工具sublime的使用技巧，从慕课中总结而来</p>
-<a id="more"></a>
-<h2 id="一些插件及与其相关的快捷键的使用："><a href="#一些插件及与其相关的快捷键的使用：" class="headerlink" title="一些插件及与其相关的快捷键的使用："></a>一些插件及与其相关的快捷键的使用：</h2><p>安装Packet：菜单栏View-&gt;Show Console-&gt;粘贴text2或text3的Packet配置信息-&gt;重启软件-&gt;Ct+N（新建文档）-&gt;Ct+Sh+P-&gt;输入pci-&gt;查找要安装的插件</p>
-<h3 id="Emmet插件："><a href="#Emmet插件：" class="headerlink" title="Emmet插件："></a>Emmet插件：</h3><p>安装好Emmet插件后：</p>
-<pre><code>！+Ct+E:迅速生成html的基础元素
-
-Ct+P:查找时加 #元素名；找到后，若要在该行下新加一行，可按 Ct+Enter
-上一行  Ct+Sh+Enter
-
-ul&gt;.item$*10 ,再按Ct+E，
-则一次性生成10个&lt;li class=&quot;item(1/2/3/../10)&quot;&gt;&lt;/li&gt; 
-即 父元素&gt; .（表示有class标签或用 # 表示有id值）
-类名（id名）$*（子元素出现次数），再Ct+E
-
-在文本中写 h2{this is good} 再按Ct+E,
-则生成 &lt;h2&gt;this is good&lt;/h2&gt;
-
-Ct+ 键盘上含 } 的键：文本缩进
-
-
-Ct+Sh+V：粘贴时保持复制时的格式，如缩进等
-</code></pre><h3 id="insert-callback插件"><a href="#insert-callback插件" class="headerlink" title="insert callback插件"></a>insert callback插件</h3><pre><code>Alt+C：删除多于的符号
-</code></pre><h3 id="advanNew"><a href="#advanNew" class="headerlink" title="advanNew"></a>advanNew</h3><p>Ctrl+Shift+P打开命令模式，<br>输入”pci”（Package Control:Install Package），<br>在提示框输入”adva”，选”AdvancedNewFile”进行安装。</p>
-<pre><code>安装完成后使用&quot;Ctrl+Alt+N&quot;
-</code></pre><p>选在屏幕下方出现的输入框中输入”test.html”，创建了一个html文件；</p>
-<p>输入框中输入”public/css/test.css”，<br>则在public目录下的css中创建了一个test.css文件；</p>
-<p>输入框中输入”public/css/sass/test.sass”，<br>则在public目录下的css中创建了一个sass文件夹<br>并在其中创建了一个test.sass文件。</p>
-<h3 id="httpRequester"><a href="#httpRequester" class="headerlink" title="httpRequester"></a>httpRequester</h3><pre><code>Ctrl+Shift+P打开命令模式，
-输入&quot;pci&quot;（Package Control:Install Package），
-在提示框输入&quot;http&quot;，选&quot;Http Requester&quot;进行安装。
-</code></pre><p>安装完成后要使用注解的方式来标记函数需要测试的路由地址</p>
-<p>在Sublime内部，做服务器响应的测试Get请求</p>
-<pre><code>/* GET users listing. */
-// localhost:3000/users/
-router.get(&apos;/&apos;, function(req, res) {
-res.send(&apos;respond with a resource&apos;);
-});
-</code></pre><p>注释需要测试的路由地址”// localhost:3000/users/“（localhost为路由地址，3000为端口号）<br>选中”localhost:3000/users/“，<br>使用快捷键”Alt+Ctrl+R”，出现新的页面显示服务器的响应，<br>“200 OK”表示服务器响应正确。</p>
-<p>get请求比较容易测试，可以在浏览器中输入地址；<br>post请求比较难以测试<br>以前测试post请求需要完成一个表单（用html语言写），<br>然后模拟提交，这样不利于开发</p>
-<p>不需要前端form表单的情况下来模拟form提交，先完成post请求<br>在Sublime内部，做服务器响应的测试Post请求</p>
-<pre><code>/* 
-POST localhost:3000/users/
-Content-type: application/x-www-form-urlencoded
-POST_BODY:
-variable1=avalue&amp;variable2=1234&amp;variable3=anothervalue
-*/
-router.post(&apos;/&apos;, function(req, res) {
-res.send(req.body);});
-
-（POST：访问地址是一个post请求，
-&quot;localhost:3000/users/&quot;是访问的地址，
-&quot;Content-type...anothervalue&quot;指定是以form表单形式提交）
-选中&quot;/* */&quot;内的注释，
-使用快捷键&quot;Alt+Ctrl+R&quot;，出现新的页面显示服务器的响应，
-&quot;200 OK&quot;表示服务器响应正确
-</code></pre><h3 id="netauke-Snip"><a href="#netauke-Snip" class="headerlink" title="netauke Snip"></a>netauke Snip</h3><h3 id="sidebar-enhancement"><a href="#sidebar-enhancement" class="headerlink" title="sidebar enhancement"></a>sidebar enhancement</h3><p>右击对应文档，有直接浏览该页的选项</p>
-<h3 id="docblockr"><a href="#docblockr" class="headerlink" title="docblockr"></a>docblockr</h3><p>用于简化注释拼写</p>
-<pre><code>/** +Tab键 ：可有函数的注释格式
-
-/** 或 /* + 回车键：其余注释符自动补充
-
-输入/*按回车，补充行注释。
-
-输入/**按回车，补充多行注释。
-
-在写好的函数上方输入/**按tab键，自动补充函数说明格式。
-
-Ctrl+/: 行注释;
-
-Ctrl+Shift+/: 块注释.
-</code></pre><h3 id="sublimelinter-jshlint"><a href="#sublimelinter-jshlint" class="headerlink" title="sublimelinter-jshlint"></a>sublimelinter-jshlint</h3><pre><code>用于语法、风格的检验
-安装jsnode插件 -&gt; 
-安装sublimelinter-jshlint插件 -&gt;运行cmd，
-输入 npm install -g jshint -&gt;最后到sulimt软件里检验
-补充9.html代码对齐插件html beautiful；
-安装后快捷键ctr + alt + shift + f
-</code></pre><h3 id="SideBarEnhancements"><a href="#SideBarEnhancements" class="headerlink" title="SideBarEnhancements"></a>SideBarEnhancements</h3><p>ctrl+shift+p —&gt;Install Package —&gt;<br>找到SideBarEnhancements<br>安装SideBarEnhancements</p>
-<p>配置预览快捷键</p>
-<p>Preferences —&gt; Key Bindings - User 将以下代码复制到数组中。</p>
-<pre><code>// chrome
-{ &quot;keys&quot;: [&quot;f2&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
-&quot;args&quot;: {
-&quot;paths&quot;: [],
-&quot;application&quot;: &quot;C:/Program Files (x86)/Google/Chrome/Application/chrome.exe&quot;,
-&quot;extensions&quot;:&quot;.*&quot;
+        <p>JavaScript入门(基础学习总结)<br><a id="more"></a></p>
+<h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><h2 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h2><p>一行的结束就被认定为语句的结束，通常在结尾加上一个分号”;”来表示语句的结束。</p>
+<p>javascript作为一种脚本语言可以放在html页面中任何位置。<br>但浏览器解释html时是按先后顺序的，所以前面的script就先被执行。<br>比如进行页面显示初始化的js必须放在head里面,<br>因为初始化都要求提前进行(如给页面body设置css等);<br>而如果是通过事件调用执行的function那么对位置没什么要求的。</p>
+<h2 id="js文件引用"><a href="#js文件引用" class="headerlink" title="js文件引用"></a>js文件引用</h2><pre><code>&lt;script src=&quot;文件名&quot;&gt;&lt;/script&gt;
+</code></pre><h2 id="js注释"><a href="#js注释" class="headerlink" title="js注释"></a>js注释</h2><pre><code>//   注释一行
+/**/ 注释多行
+</code></pre><h2 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h2><pre><code>var 变量名;
+</code></pre><p>注意:</p>
+<pre><code>1. 变量名必须以下划线&apos;_&apos;、英文字母或美元符号&apos;$&apos;开始.
+2. 变量名可以使用任意多个英文字母，数字，下划线，或者美元符号组成
+3. 变量名不能使用JavaScript关键词和JavaScript保留字
+</code></pre><h2 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h2><pre><code>function 函数名()
+{
+    函数代码;
 }
-},
+</code></pre><h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><pre><code>if(条件)
+{ 条件成立时执行的代码 }
+else
+{ 条件不成立时执行的代码 }
+</code></pre><h2 id="输出内容-document-write"><a href="#输出内容-document-write" class="headerlink" title="输出内容(document.write())"></a>输出内容(document.write())</h2><p>第一种:输出内容用””括起，直接输出””号内的内容。</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+  document.write(&quot;I love JavaScript！&quot;); //内容用&quot;&quot;括起来，&quot;&quot;里的内容直接输出。
+&lt;/script&gt;
+</code></pre><p>第二种:通过变量，输出内容</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+  var mystr=&quot;hello world!&quot;;
+  document.write(mystr);  //直接写变量名，输出变量存储的内容。
+&lt;/script&gt;
+</code></pre><p>第三种:输出多项内容，内容之间用+号连接。</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+  var mystr=&quot;hello&quot;;
+  document.write(mystr+&quot;I love JavaScript&quot;); 
+  //多项内容之间用+号连接
+&lt;/script&gt;
+</code></pre><p>第四种:输出HTML标签，并起作用，标签使用””括起来。</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+  var mystr=&quot;hello&quot;;
+document.write(mystr+&quot;&lt;br&gt;&quot;);//输出hello后，输出一个换行符
+  document.write(&quot;JavaScript&quot;);
+&lt;/script&gt;
+</code></pre><p> 输出时，加上“white-space:pre”(空白会被浏览器保留)样式，<br> 可以输出空格。</p>
+<h3 id="常用互动语法"><a href="#常用互动语法" class="headerlink" title="常用互动语法"></a>常用互动语法</h3><h2 id="js-警告"><a href="#js-警告" class="headerlink" title="js-警告"></a>js-警告</h2><pre><code>alert(字符串);
+</code></pre><p>alert 弹出消息对话框(包含一个确定按钮)。</p>
+<h2 id="js-确定-confirm消息对话框"><a href="#js-确定-confirm消息对话框" class="headerlink" title="js-确定(confirm消息对话框)"></a>js-确定(confirm消息对话框)</h2><pre><code>confirm(str);
+</code></pre><p>str:在消息对话框中要显示的文本</p>
+<p>返回值:<br>        按下“确定”，返回true<br>        按下“取消”，返回false</p>
+<p>返回值用于判断语句。</p>
+<h2 id="js-提问-prompt"><a href="#js-提问-prompt" class="headerlink" title="js-提问(prompt)"></a>js-提问(prompt)</h2><pre><code>prompt(str1,str2);
+</code></pre><p>str1:要显示在消息对话框中的文本，不可修改</p>
+<p>str2:文本框的内容，可以修改</p>
+<p>返回值：<br>        点击确定，文本框中的内容作为返回值<br>        点击取消，返回null</p>
+<h2 id="js-打开新窗口-window-open"><a href="#js-打开新窗口-window-open" class="headerlink" title="js-打开新窗口(window.open)"></a>js-打开新窗口(window.open)</h2><pre><code>window.open([URl],[窗口名称],[参数字符串])
+</code></pre><p>URL：可选参数，在窗口中要显示网页的网址或路径。<br>如果省略这个参数，或者它的值是空字符串，那么窗口就不显示任何文档。</p>
+<p>窗口名称：可选参数，被打开窗口的名称。</p>
+<p>注意：<br>    1.该名称由字母、数字和下划线字符组成。</p>
+<pre><code>2.&quot;_top&quot;、&quot;_blank&quot;、&quot;_self&quot;具有特殊意义的名称。
+    _blank：在新窗口显示目标网页
+    _self：在当前窗口显示目标网页
+    _top：框架网页中在上部窗口中显示目标网页
 
+3.相同 name 的窗口只能创建一个，
+要想创建多个窗口则 name 不能相同。
 
+4.name 不能包含有空格。
+</code></pre><p>参数字符串：可选参数，设置窗口参数，各参数用逗号隔开。</p>
+<pre><code>参数          值                     说明
+ top         Number        窗口顶部离屏幕顶部的像素数
+left         Number        窗口左侧离屏幕左侧的像素数
+width        Number               窗口的高度
+height       Number               窗口的宽度
+menubar      yes/no             窗口有没有菜单
+toolbar      yes/no             窗口有没有工具条
+scrollbars   yes/no             窗口有没有滚动条
+status       yes/no             窗口有没有状态栏
+</code></pre><h2 id="js-关闭窗口-window-close"><a href="#js-关闭窗口-window-close" class="headerlink" title="js-关闭窗口(window.close)"></a>js-关闭窗口(window.close)</h2><pre><code>window.close;//关闭本窗口
+</code></pre><p>或<br>    &lt;窗口对象&gt;.close();<br>    //关闭指定窗口</p>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><p>文档对象模型DOM（Document Object Model）<br>定义访问和处理HTML文档的标准方法。<br>DOM 将HTML文档呈现为带有元素、属性和文本的树结构(节点树)</p>
+<p>元素节点：<html> <body> <p> 等标签</p>
+<p>文本节点：向用户展示的内容,如<li>间的文本</li></p>
+<p>属性节点: 元素属性，如<a>标签的链接属性 herf=””</a></p>
+<h2 id="获取id"><a href="#获取id" class="headerlink" title="获取id"></a>获取id</h2><pre><code>document.getElementById(&quot;id&quot;)
+</code></pre><p>以变量接取，var i=document.getElementById(“id”);</p>
+<h2 id="innerHTML属性"><a href="#innerHTML属性" class="headerlink" title="innerHTML属性"></a>innerHTML属性</h2><p>innerHTML(区分大小写)属性用于获取或替换HTML元素的内容</p>
+<pre><code>object.innerHTML
+//object为获取的对象，下同
+</code></pre><p>eg:<br>    &lt; p id=”con”&gt;xxxxxx&lt; /p &gt;<br>    var i=document.getElementById(“con”);<br>    i.innerHTML=”hello world” //修改p中的内容为”hello world”</p>
+<h2 id="改变HTML样式"><a href="#改变HTML样式" class="headerlink" title="改变HTML样式"></a>改变HTML样式</h2><pre><code>object.style.display=&quot;value&quot;;
+</code></pre><p>value:<br>    none   此元素不会被显示(隐藏)</p>
+<pre><code>block  此元素将显示为块级元素(显示)
+</code></pre><h2 id="控制类名-className属性"><a href="#控制类名-className属性" class="headerlink" title="控制类名(className属性)"></a>控制类名(className属性)</h2><pre><code>object.className=classname;
+</code></pre><p>作用：<br>    1.获取元素的class属性<br>    2.为网页内的某个元素指定一个css样式来改变外观</p>
+<h2 id="取消获取的样式"><a href="#取消获取的样式" class="headerlink" title="取消获取的样式"></a>取消获取的样式</h2><pre><code>1. object.removeAttribute(&quot;style&quot;);
 
-// firefox
-{ &quot;keys&quot;: [&quot;f3&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
-&quot;args&quot;: {
-&quot;paths&quot;: [],
-&quot;application&quot;: &quot;D:/Program Files (x86)/Mozilla Firefox/firefox.exe&quot;,
-&quot;extensions&quot;:&quot;.*&quot;
-}
-},
+2. object.style=null;
 
-
-
-// ie
-{ &quot;keys&quot;: [&quot;f4&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
-&quot;args&quot;: {
-&quot;paths&quot;: [],
-&quot;application&quot;: &quot;C:/Program Files/Internet Explorer/iexplore.exe&quot;,
-&quot;extensions&quot;:&quot;.*&quot;
-}
-}
-</code></pre><p>上面的代码中有两处需要注意的地方，<br>一个是keys表示快捷键，即f2可以启动chrome进行预览。<br>另一个是application，表示浏览器所在的安装路径，<br>只有路径配置正确，才能够正常调用浏览器</p>
-<h3 id="nettus-fetch插件"><a href="#nettus-fetch插件" class="headerlink" title="nettus fetch插件"></a>nettus fetch插件</h3><pre><code>ctrl+shift+p---&gt;输入nettus fetch回车
----&gt;ctrl_shift+p---&gt;输入fetch manage来管理配置文件
-</code></pre><p>使用fetch来下载jquery步骤：</p>
-<pre><code>ctrl+alt+n
-在某个目录下创建一个jQuery文件---&gt;
-在该文件中输入ctrl+shift+p---&gt;
-输入fetch file回车---&gt;jquery回车下载。
-</code></pre><p>在fetch配置文件中来增加新的类库（如：underscore.js）：<br>步骤如下：</p>
-<pre><code>在该文件中添加&quot;underscore&quot;:
-&quot;http://github.com
-/jashkenas/underscore/blob/master/underscore.min.js&quot;
-和前一个参数以&quot;逗号&quot;来分隔。
-ctrl+alt+n
-在某个目录下创建一个underscore文件---&gt;
-在该文件中输入ctrl+shift+p---&gt;
-输入fetch file回车---&gt;jquery回车下载。
-</code></pre><p>到github下载underscore.js文件<br>github上的underscore文件地址：</p>
-<pre><code>https://raw.githubusercontent.com/
-jashkenas/underscore/master/underscore-min.js
-</code></pre><h2 id="快捷键的使用"><a href="#快捷键的使用" class="headerlink" title="快捷键的使用"></a>快捷键的使用</h2><p>1、Ctrl+H：查找替换<br>2、Ctrl+D：选择游标所在单词，连续Ctrl+D实现多行选择<br>（选择与第一次选择相同的单词）<br>3、Ctrl+K Ctrl+D：跳过当前选择，选择下一个<br>4、Ctrl+shift+D：复制游标所在行<br>5、Ctrl+F3：选择所以与游标所在单词相同的单词<br>6、全选：先Ctrl+A全选然后Ctrl+shift+L产生游标<br>7、按住shift，右键，拖动，产生多行游标<br>8、Ctrl+P 的作用是：搜索项目中的文件 go to anything<br>9、Ctrl+Shift+P 快捷键的作用是：打开命令模式<br>10、Ctrl+Shift+K 的快捷键是：删除整行<br>11、ctrl+shift+v 保持缩进粘贴<br>12、Ctrl+] 增加缩进 [ 减小缩进。<br>13、Alt+. 闭合标签<br>14、Alt+&gt; 闭合标签<br>15、Ctrl+? 注释一行</p>
-
+3.object.style=&quot;&quot;;
+</code></pre></body></html></p>
       
     </div>
     
@@ -503,7 +469,7 @@ jashkenas/underscore/master/underscore-min.js
       
         <div class="post-tags">
           
-            <a href="/sollylee.github.io/tags/前端工具/" rel="tag"><i class="fa fa-tag"></i> 前端工具</a>
+            <a href="/sollylee.github.io/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
           
         </div>
       
@@ -516,8 +482,8 @@ jashkenas/underscore/master/underscore-min.js
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/sollylee.github.io/2018/01/27/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/sollylee.github.io/2018/01/28/sublime使用技巧/" rel="next" title="sublime使用技巧">
+                <i class="fa fa-chevron-left"></i> sublime使用技巧
               </a>
             
           </div>
@@ -525,10 +491,6 @@ jashkenas/underscore/master/underscore-min.js
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/sollylee.github.io/2018/02/01/JavaScript入门/" rel="prev" title="pageJavaScript入门">
-                pageJavaScript入门 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -697,7 +659,7 @@ jashkenas/underscore/master/underscore-min.js
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些插件及与其相关的快捷键的使用："><span class="nav-number">1.</span> <span class="nav-text">一些插件及与其相关的快捷键的使用：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Emmet插件："><span class="nav-number">1.1.</span> <span class="nav-text">Emmet插件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insert-callback插件"><span class="nav-number">1.2.</span> <span class="nav-text">insert callback插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#advanNew"><span class="nav-number">1.3.</span> <span class="nav-text">advanNew</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#httpRequester"><span class="nav-number">1.4.</span> <span class="nav-text">httpRequester</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#netauke-Snip"><span class="nav-number">1.5.</span> <span class="nav-text">netauke Snip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sidebar-enhancement"><span class="nav-number">1.6.</span> <span class="nav-text">sidebar enhancement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docblockr"><span class="nav-number">1.7.</span> <span class="nav-text">docblockr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sublimelinter-jshlint"><span class="nav-number">1.8.</span> <span class="nav-text">sublimelinter-jshlint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SideBarEnhancements"><span class="nav-number">1.9.</span> <span class="nav-text">SideBarEnhancements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nettus-fetch插件"><span class="nav-number">1.10.</span> <span class="nav-text">nettus fetch插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键的使用"><span class="nav-number">2.</span> <span class="nav-text">快捷键的使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础语法"><span class="nav-number">1.</span> <span class="nav-text">基础语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本规则"><span class="nav-number"></span> <span class="nav-text">基本规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js文件引用"><span class="nav-number"></span> <span class="nav-text">js文件引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js注释"><span class="nav-number"></span> <span class="nav-text">js注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义变量"><span class="nav-number"></span> <span class="nav-text">定义变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义函数"><span class="nav-number"></span> <span class="nav-text">定义函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件语句"><span class="nav-number"></span> <span class="nav-text">条件语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出内容-document-write"><span class="nav-number"></span> <span class="nav-text">输出内容(document.write())</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用互动语法"><span class="nav-number">1.</span> <span class="nav-text">常用互动语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-警告"><span class="nav-number"></span> <span class="nav-text">js-警告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-确定-confirm消息对话框"><span class="nav-number"></span> <span class="nav-text">js-确定(confirm消息对话框)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-提问-prompt"><span class="nav-number"></span> <span class="nav-text">js-提问(prompt)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-打开新窗口-window-open"><span class="nav-number"></span> <span class="nav-text">js-打开新窗口(window.open)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js-关闭窗口-window-close"><span class="nav-number"></span> <span class="nav-text">js-关闭窗口(window.close)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM"><span class="nav-number">1.</span> <span class="nav-text">DOM</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取id"><span class="nav-number"></span> <span class="nav-text">获取id</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#innerHTML属性"><span class="nav-number"></span> <span class="nav-text">innerHTML属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改变HTML样式"><span class="nav-number"></span> <span class="nav-text">改变HTML样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制类名-className属性"><span class="nav-number"></span> <span class="nav-text">控制类名(className属性)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取消获取的样式"><span class="nav-number"></span> <span class="nav-text">取消获取的样式</span></a></div>
             
 
           </div>
