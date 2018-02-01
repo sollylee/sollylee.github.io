@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LISILE&#39;s Notes">
 <meta property="og:description" content="JavaScript入门(基础学习总结)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-01T11:26:41.790Z">
+<meta property="og:updated_time" content="2018-02-01T11:32:57.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript入门">
 <meta name="twitter:description" content="JavaScript入门(基础学习总结)">
@@ -431,18 +431,21 @@ toolbar      yes/no             窗口有没有工具条
 scrollbars   yes/no             窗口有没有滚动条
 status       yes/no             窗口有没有状态栏
 </code></pre><h3 id="js-关闭窗口-window-close"><a href="#js-关闭窗口-window-close" class="headerlink" title="js-关闭窗口(window.close)"></a>js-关闭窗口(window.close)</h3><pre><code>window.close;//关闭本窗口
-</code></pre><p>或<br>    &lt;窗口对象&gt;.close();<br>    //关闭指定窗口</p>
-<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><p>文档对象模型DOM（Document Object Model）<br>定义访问和处理HTML文档的标准方法。<br>DOM 将HTML文档呈现为带有元素、属性和文本的树结构(节点树)</p>
-<p>元素节点：<html> <body> <p> 等标签</p>
-<p>文本节点：向用户展示的内容,如<li>间的文本</li></p>
-<p>属性节点: 元素属性，如<a>标签的链接属性 herf=””</a></p>
+</code></pre><p>或</p>
+<pre><code>&lt;窗口对象&gt;.close();//关闭指定窗口
+</code></pre><h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><p>文档对象模型DOM（Document Object Model）<br>定义访问和处理HTML文档的标准方法。<br>DOM 将HTML文档呈现为带有元素、属性和文本的树结构(节点树)</p>
+<p>元素节点：&lt; html &gt; &lt; body &gt; &lt; p &gt; 等标签</p>
+<p>文本节点：向用户展示的内容,如&lt; li &gt;间的文本</p>
+<p>属性节点: 元素属性，如&lt; a &gt;标签的链接属性 herf=””</p>
 <h3 id="获取id"><a href="#获取id" class="headerlink" title="获取id"></a>获取id</h3><pre><code>document.getElementById(&quot;id&quot;)
 </code></pre><p>以变量接取，var i=document.getElementById(“id”);</p>
 <h3 id="innerHTML属性"><a href="#innerHTML属性" class="headerlink" title="innerHTML属性"></a>innerHTML属性</h3><p>innerHTML(区分大小写)属性用于获取或替换HTML元素的内容</p>
-<pre><code>object.innerHTML
-//object为获取的对象，下同
-</code></pre><p>eg:<br>    &lt; p id=”con”&gt;xxxxxx&lt; /p &gt;<br>    var i=document.getElementById(“con”);<br>    i.innerHTML=”hello world” //修改p中的内容为”hello world”</p>
-<h3 id="改变HTML样式"><a href="#改变HTML样式" class="headerlink" title="改变HTML样式"></a>改变HTML样式</h3><pre><code>object.style.display=&quot;value&quot;;
+<pre><code>object.innerHTML//object为获取的对象，下同
+</code></pre><p>eg:</p>
+<pre><code>&lt; p id=&quot;con&quot;&gt;xxxxxx&lt; /p &gt;
+var i=document.getElementById(&quot;con&quot;);
+i.innerHTML=&quot;hello world&quot; //修改p中的内容为&quot;hello world&quot;
+</code></pre><h3 id="改变HTML样式"><a href="#改变HTML样式" class="headerlink" title="改变HTML样式"></a>改变HTML样式</h3><pre><code>object.style.display=&quot;value&quot;;
 </code></pre><p>value:<br>    none   此元素不会被显示(隐藏)</p>
 <pre><code>block  此元素将显示为块级元素(显示)
 </code></pre><h3 id="控制类名-className属性"><a href="#控制类名-className属性" class="headerlink" title="控制类名(className属性)"></a>控制类名(className属性)</h3><pre><code>object.className=classname;
@@ -452,7 +455,7 @@ status       yes/no             窗口有没有状态栏
 2. object.style=null;
 
 3.object.style=&quot;&quot;;
-</code></pre></body></html></p>
+</code></pre>
       
     </div>
     
