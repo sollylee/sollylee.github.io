@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LISILE&#39;s Notes">
 <meta property="og:description" content="JavaScript入门(基础学习总结)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-01T11:32:57.063Z">
+<meta property="og:updated_time" content="2018-02-02T11:57:49.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript入门">
 <meta name="twitter:description" content="JavaScript入门(基础学习总结)">
@@ -362,16 +362,31 @@
 <h3 id="js文件引用"><a href="#js文件引用" class="headerlink" title="js文件引用"></a>js文件引用</h3><pre><code>&lt;script src=&quot;文件名&quot;&gt;&lt;/script&gt;
 </code></pre><h3 id="js注释"><a href="#js注释" class="headerlink" title="js注释"></a>js注释</h3><pre><code>//   注释一行
 /**/ 注释多行
-</code></pre><h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><pre><code>var 变量名;
+</code></pre><h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><pre><code>var  变量名;
 </code></pre><p>注意:</p>
 <pre><code>1. 变量名必须以下划线&apos;_&apos;、英文字母或美元符号&apos;$&apos;开始.
 2. 变量名可以使用任意多个英文字母，数字，下划线，或者美元符号组成
 3. 变量名不能使用JavaScript关键词和JavaScript保留字
-</code></pre><h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><pre><code>function 函数名()
+</code></pre><p>可以给变量赋值数字，字母，字符串，true或false.</p>
+<p>附：</p>
+<p>javascript保留字：</p>
+<pre><code>abstract、enum、int、short、boolean、export、interface、
+static、byte、extends、long、super、char、final、native、
+synchronized、class、float、package、throws、const、goto、
+private、tranisientdebugger、implements、protected、volatile、
+double、import、public
+</code></pre><p>javascript关键字：</p>
+<pre><code>break、else、new、var、case、finally、return、void、catch、
+for、switch、while、default、if、throw、delete、in、
+try、do、instanceof、typeof
+</code></pre><h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><pre><code>function 函数名(形参)
 {
     函数代码;
+    return  返回值;
 }
-</code></pre><h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><pre><code>if(条件)
+</code></pre><p>形参和返回语句可有可无，<br>返回值可以是数字，字母，字符串，ture/false<br>返回值可以用变量取接。</p>
+<p>调用函数： 函数名(参数);</p>
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><pre><code>if(条件)
 { 条件成立时执行的代码 }
 else
 { 条件不成立时执行的代码 }
@@ -495,6 +510,10 @@ i.innerHTML=&quot;hello world&quot; //修改p中的内容为&quot;hello world&qu
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/sollylee.github.io/2018/02/02/JavaScript进阶-一/" rel="prev" title="JavaScript进阶(一)">
+                JavaScript进阶(一) <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -574,7 +593,7 @@ i.innerHTML=&quot;hello world&quot; //修改p中的内容为&quot;hello world&qu
               
                 <a href="/sollylee.github.io/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
