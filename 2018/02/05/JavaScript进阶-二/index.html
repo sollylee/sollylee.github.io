@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="前端工具," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="前端工具sublime的使用技巧，从慕课中总结而来">
-<meta name="keywords" content="前端工具">
+<meta name="description" content="js进阶学习总结two">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sublime使用技巧">
-<meta property="og:url" content="https://sollylee.github.io/2018/01/28/sublime使用技巧/index.html">
+<meta property="og:title" content="JavaScript进阶(二)">
+<meta property="og:url" content="https://sollylee.github.io/2018/02/05/JavaScript进阶-二/index.html">
 <meta property="og:site_name" content="LISILE&#39;s Notes">
-<meta property="og:description" content="前端工具sublime的使用技巧，从慕课中总结而来">
+<meta property="og:description" content="js进阶学习总结two">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-01T10:24:13.241Z">
+<meta property="og:updated_time" content="2018-02-05T08:18:10.931Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sublime使用技巧">
-<meta name="twitter:description" content="前端工具sublime的使用技巧，从慕课中总结而来">
+<meta name="twitter:title" content="JavaScript进阶(二)">
+<meta name="twitter:description" content="js进阶学习总结two">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://sollylee.github.io/2018/01/28/sublime使用技巧/"/>
+  <link rel="canonical" href="https://sollylee.github.io/2018/02/05/JavaScript进阶-二/"/>
 
 
 
 
 
-  <title>sublime使用技巧 | LISILE's Notes</title>
+  <title>JavaScript进阶(二) | LISILE's Notes</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sollylee.github.io/sollylee.github.io/2018/01/28/sublime使用技巧/">
+    <link itemprop="mainEntityOfPage" href="https://sollylee.github.io/sollylee.github.io/2018/02/05/JavaScript进阶-二/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Solly Lee">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">sublime使用技巧</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript进阶(二)</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-28T09:42:37+08:00">
-                2018-01-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-05T12:32:25+08:00">
+                2018-02-05
               </time>
             
 
@@ -356,137 +356,107 @@
       
 
       
-        <p>前端工具sublime的使用技巧，从慕课中总结而来</p>
-<a id="more"></a>
-<h2 id="一些插件及与其相关的快捷键的使用："><a href="#一些插件及与其相关的快捷键的使用：" class="headerlink" title="一些插件及与其相关的快捷键的使用："></a>一些插件及与其相关的快捷键的使用：</h2><p>安装Packet：菜单栏View-&gt;Show Console-&gt;粘贴text2或text3的Packet配置信息-&gt;重启软件-&gt;Ct+N（新建文档）-&gt;Ct+Sh+P-&gt;输入pci-&gt;查找要安装的插件</p>
-<h3 id="Emmet插件："><a href="#Emmet插件：" class="headerlink" title="Emmet插件："></a>Emmet插件：</h3><p>安装好Emmet插件后：</p>
-<pre><code>！+Ct+E:迅速生成html的基础元素
+        <p>js进阶学习总结two<br><a id="more"></a></p>
+<h2 id="js内置对象"><a href="#js内置对象" class="headerlink" title="js内置对象"></a>js内置对象</h2><h3 id="Date-日期对象"><a href="#Date-日期对象" class="headerlink" title="Date 日期对象"></a>Date 日期对象</h3><p>日期对象可以储存任意一个日期，<br>并且可以精确到毫秒数（1/1000 秒）。<br>定义一个时间对象 :</p>
+<pre><code>var Udate=new Date(); 
+</code></pre><p>访问方法语法：“&lt;日期对象&gt;.&lt;方法&gt;”<br>Date对象中处理时间和日期的常用方法：</p>
+<pre><code>get/setDate() 返回，设置日期
+get/setFullYear() 返回，设置年份，用四位数表示
+get/setYear() 返回，设置年份
+get/setHours 返回，设置小时 24小时
+get/setMouth ()返回，设置月份 0-11月 所以要加一
+get/setMinutes ()返回，设置分钟
+get/setTime() 返回，设置时间，毫秒为单位，计算从 
+1970 年 1 月 1 日零时到日期对象所指的日期的毫秒数。
+</code></pre><p>可以在设置时间上推迟时间:<br>eg:时间推迟 1 小时<br>就是: “x.setTime(x.getTime() + 60 <em> 60 </em> 1000);”</p>
+<p>获取星期的方法:<br>getDay() 返回星期，返回的是0-6的数字，0 表示星期天。<br>如果要返回相对应“星期”，<br>通过数组完成，代码如下:</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+  var mydate=new Date();
+  var weekday=[&quot;星期日&quot;,&quot;星期一&quot;,&quot;星期二&quot;,&quot;星期三&quot;,
+  &quot;星期四&quot;,&quot;星期五&quot;,&quot;星期六&quot;];
+  document.write(&quot;今天是：&quot;+ weekday[mydate.getDay()]);
+&lt;/script&gt;
+</code></pre><h3 id="字符串对象"><a href="#字符串对象" class="headerlink" title="字符串对象"></a>字符串对象</h3><p>定义字符串的方法就是直接赋值。<br>eg：</p>
+<pre><code>var mystr = &quot;Hello World&quot;
+</code></pre><p>访问字符串对象的属性length:</p>
+<pre><code>stringObject.length; 返回该字符串的长度。
+</code></pre><p>访问字符串对象的方法：</p>
+<pre><code>stringObject.方法
 
-Ct+P:查找时加 #元素名；找到后，若要在该行下新加一行，可按 Ct+Enter
-上一行  Ct+Sh+Enter
-
-ul&gt;.item$*10 ,再按Ct+E，
-则一次性生成10个&lt;li class=&quot;item(1/2/3/../10)&quot;&gt;&lt;/li&gt; 
-即 父元素&gt; .（表示有class标签或用 # 表示有id值）
-类名（id名）$*（子元素出现次数），再Ct+E
-
-在文本中写 h2{this is good} 再按Ct+E,
-则生成 &lt;h2&gt;this is good&lt;/h2&gt;
-
-Ct+ 键盘上含 } 的键：文本缩进
-
-
-Ct+Sh+V：粘贴时保持复制时的格式，如缩进等
-</code></pre><h3 id="insert-callback插件"><a href="#insert-callback插件" class="headerlink" title="insert callback插件"></a>insert callback插件</h3><pre><code>Alt+C：删除多于的符号
-</code></pre><h3 id="advanNew"><a href="#advanNew" class="headerlink" title="advanNew"></a>advanNew</h3><p>Ctrl+Shift+P打开命令模式，<br>输入”pci”（Package Control:Install Package），<br>在提示框输入”adva”，选”AdvancedNewFile”进行安装。</p>
-<pre><code>安装完成后使用&quot;Ctrl+Alt+N&quot;
-</code></pre><p>选在屏幕下方出现的输入框中输入”test.html”，创建了一个html文件；</p>
-<p>输入框中输入”public/css/test.css”，<br>则在public目录下的css中创建了一个test.css文件；</p>
-<p>输入框中输入”public/css/sass/test.sass”，<br>则在public目录下的css中创建了一个sass文件夹<br>并在其中创建了一个test.sass文件。</p>
-<h3 id="httpRequester"><a href="#httpRequester" class="headerlink" title="httpRequester"></a>httpRequester</h3><pre><code>Ctrl+Shift+P打开命令模式，
-输入&quot;pci&quot;（Package Control:Install Package），
-在提示框输入&quot;http&quot;，选&quot;Http Requester&quot;进行安装。
-</code></pre><p>安装完成后要使用注解的方式来标记函数需要测试的路由地址</p>
-<p>在Sublime内部，做服务器响应的测试Get请求</p>
-<pre><code>/* GET users listing. */
-// localhost:3000/users/
-router.get(&apos;/&apos;, function(req, res) {
-res.send(&apos;respond with a resource&apos;);
-});
-</code></pre><p>注释需要测试的路由地址”// localhost:3000/users/“（localhost为路由地址，3000为端口号）<br>选中”localhost:3000/users/“，<br>使用快捷键”Alt+Ctrl+R”，出现新的页面显示服务器的响应，<br>“200 OK”表示服务器响应正确。</p>
-<p>get请求比较容易测试，可以在浏览器中输入地址；<br>post请求比较难以测试<br>以前测试post请求需要完成一个表单（用html语言写），<br>然后模拟提交，这样不利于开发</p>
-<p>不需要前端form表单的情况下来模拟form提交，先完成post请求<br>在Sublime内部，做服务器响应的测试Post请求</p>
-<pre><code>/* 
-POST localhost:3000/users/
-Content-type: application/x-www-form-urlencoded
-POST_BODY:
-variable1=avalue&amp;variable2=1234&amp;variable3=anothervalue
-*/
-router.post(&apos;/&apos;, function(req, res) {
-res.send(req.body);});
-
-（POST：访问地址是一个post请求，
-&quot;localhost:3000/users/&quot;是访问的地址，
-&quot;Content-type...anothervalue&quot;指定是以form表单形式提交）
-选中&quot;/* */&quot;内的注释，
-使用快捷键&quot;Alt+Ctrl+R&quot;，出现新的页面显示服务器的响应，
-&quot;200 OK&quot;表示服务器响应正确
-</code></pre><h3 id="netauke-Snip"><a href="#netauke-Snip" class="headerlink" title="netauke Snip"></a>netauke Snip</h3><h3 id="sidebar-enhancement"><a href="#sidebar-enhancement" class="headerlink" title="sidebar enhancement"></a>sidebar enhancement</h3><p>右击对应文档，有直接浏览该页的选项</p>
-<h3 id="docblockr"><a href="#docblockr" class="headerlink" title="docblockr"></a>docblockr</h3><p>用于简化注释拼写</p>
-<pre><code>/** +Tab键 ：可有函数的注释格式
-
-/** 或 /* + 回车键：其余注释符自动补充
-
-输入/*按回车，补充行注释。
-
-输入/**按回车，补充多行注释。
-
-在写好的函数上方输入/**按tab键，自动补充函数说明格式。
-
-Ctrl+/: 行注释;
-
-Ctrl+Shift+/: 块注释.
-</code></pre><h3 id="sublimelinter-jshlint"><a href="#sublimelinter-jshlint" class="headerlink" title="sublimelinter-jshlint"></a>sublimelinter-jshlint</h3><pre><code>用于语法、风格的检验
-安装jsnode插件 -&gt; 
-安装sublimelinter-jshlint插件 -&gt;运行cmd，
-输入 npm install -g jshint -&gt;最后到sulimt软件里检验
-补充9.html代码对齐插件html beautiful；
-安装后快捷键ctr + alt + shift + f
-</code></pre><h3 id="SideBarEnhancements"><a href="#SideBarEnhancements" class="headerlink" title="SideBarEnhancements"></a>SideBarEnhancements</h3><p>ctrl+shift+p —&gt;Install Package —&gt;<br>找到SideBarEnhancements<br>安装SideBarEnhancements</p>
-<p>配置预览快捷键</p>
-<p>Preferences —&gt; Key Bindings - User 将以下代码复制到数组中。</p>
-<pre><code>// chrome
-{ &quot;keys&quot;: [&quot;f2&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
-&quot;args&quot;: {
-&quot;paths&quot;: [],
-&quot;application&quot;: &quot;C:/Program Files (x86)/Google/Chrome/Application/chrome.exe&quot;,
-&quot;extensions&quot;:&quot;.*&quot;
+toUpperCase() 将字符串所有小写字母转换为大写
+toLowerCase() 将字符串所有大写字母转换为小写
+</code></pre><h4 id="charAt-index"><a href="#charAt-index" class="headerlink" title="charAt(index)"></a>charAt(index)</h4><p>返回指定位置的字符(index为字符下标,必填)<br>返回的字符是长度为 1 的字符串。</p>
+<p>注意：</p>
+<p>1.字符串中第一个字符的下标是0。<br>  最后一个字符的下标为字符串长度减一(string.length-1)</p>
+<p>2.如果参数index不在 0 与string.length-1之间，<br>  该方法将返回一个空字符串</p>
+<p>3.空格也算一个字符</p>
+<h4 id="indexOf-substring-startpos"><a href="#indexOf-substring-startpos" class="headerlink" title="indexOf(substring, startpos)"></a>indexOf(substring, startpos)</h4><p>返回某个指定的字符串值在字符串中首次出现的位置.<br>substring(必填), startpos(可选参数)</p>
+<p>说明：</p>
+<p>1.该方法将从头到尾地检索字符串stringObject,<br>  看它是否含有子串substring</p>
+<p>2.可选参数，从stringObject的startpos位置开始查找substring，<br>如果没有此参数将从stringObject的开始位置查找。</p>
+<p>3.如果找到一个 substring，则返回substring的第一次出现的位置<br>stringObject 中的字符位置是从 0 开始的</p>
+<p>若要检索的字符串值没有出现，则返回-1</p>
+<h4 id="字符串分割split-separator-limit"><a href="#字符串分割split-separator-limit" class="headerlink" title="字符串分割split(separator,limit)"></a>字符串分割split(separator,limit)</h4><p>将字符串分割为字符串数组，并返回此数组。</p>
+<p>sparator为必填参数，以该参数为标志分割数组</p>
+<p>limit为可选参数，分割次数，设置后，<br>返回的字符串不会超过分割次数,省略后将返回所有分割的字符串</p>
+<p>注意：如果把空字符串(“”)作为separator,<br>那么stringObject中的每个字符之间都会被分割。</p>
+<h4 id="substring-startPos-stopPos"><a href="#substring-startPos-stopPos" class="headerlink" title="substring(startPos,stopPos)"></a>substring(startPos,stopPos)</h4><p>提取字符串中介于两个指定下标之间的字符</p>
+<p>startPos为必填参数，一个非负整数，开始位置</p>
+<p>stopPos为可填参数，一个非负整数，结束位置,<br>省略后默认为字符串末尾</p>
+<p>注意：</p>
+<p>1.返回的内容是从start开始(包含start位置的字符)到stop-1 处的所有字符，其长度为 stop 减start。</p>
+<p>2.如果参数 start 与 stop 相等，<br>那么该方法返回的就是一个空串(即长度为 0 的字符串)</p>
+<p>3.如果 start 比 stop 大，<br>那么该方法在提取子串之前会先交换这两个参数。</p>
+<h4 id="substr-startPos-length"><a href="#substr-startPos-length" class="headerlink" title="substr(startPos,length)"></a>substr(startPos,length)</h4><p>从字符串中提取从 startPos位置开始的指定数目的字符串。</p>
+<p>startPos为必填参数,开始位置.必须是数值</p>
+<p>length为可填参数,提取的字符串长度,省略则返回从startPos<br>到字符串对象的结尾的字符</p>
+<p>注意：</p>
+<p>1.如果参数startPos是负数，从字符串的尾部开始算起的位置。<br>即:-1 指字符串中最后一个字符，-2指倒数第二个字符,以此类推</p>
+<p>2.如果startPos为负数且绝对值大于字符串长度，startPos为0。</p>
+<h3 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h3><p>Math对象，提供对数据的数学计算。<br>Math对象是一个固有的对象，无需创建它，直接把 Math 作为对象使用就可以调用其所有属性和方法<br>eg：<br>      var mypi=Math.PI; //获取π值<br>调用方式: Math.方法<br>常用方法:</p>
+<pre><code>ceil(X) 对一个数进行向上取整，X必填,为一个数值。下同
+floor(X) 对一个数进行向下取整。
+round(X) 把一个数字四舍五入为最接近的整数。
+random() 返回介于 0 ~ 1（大于或等于 0 但小于 1 )
+         之间的一个随机数。
+</code></pre><h3 id="数组对象-补充"><a href="#数组对象-补充" class="headerlink" title="数组对象(补充)"></a>数组对象(补充)</h3><p>数组方法:</p>
+<p>调用方式:    arrayObject.方法</p>
+<pre><code>concat() 连接两个或更多的数组，并返回结果
+join()把数组的所有元素放入一个字符串。
+      元素通过指定的分隔符进行分隔；
+pop() 删除并返回数组的最后一个元素；
+push() 向数组的未尾添加一个或多个元素,并返回新的长度
+reverse() 颠倒数组中的元素顺序；
+shift() 删除并返回数组的第一个元素；
+slice() 从某个已有的数组返回选定的元素；
+sort() 对数组的元素进行排序；
+splice() 删除元素，并向数组添加新元素；
+toSource() 返回该对象的源代码。
+toString() 把数组转换为字符串，并返回结果；
+</code></pre><p>部分方法详解:</p>
+<h4 id="concat-array1-array2-…-arrayN"><a href="#concat-array1-array2-…-arrayN" class="headerlink" title="concat(array1,array2,…,arrayN)"></a>concat(array1,array2,…,arrayN)</h4><p>连接两个或多个数组。返回一个新数组(副本)，不改变原来的数组。<br>array1为要连接的第一个数组，以此类推</p>
+<h4 id="join-separator"><a href="#join-separator" class="headerlink" title="join(separator)"></a>join(separator)</h4><p>把数组中的所有元素放入一个字符串。<br>元素是通过指定的分隔符进行分隔的。<br>sperator为可选参数，指定的分隔符，省略默认为 逗号</p>
+<p>注意：<br>返回的字符串中，是把数组中的各个元素串起来，<br>用&lt;分隔符&gt;置于元素与元素之间。<br>这个方法不影响数组原本的内容。</p>
+<h4 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h4><p>用于颠倒数组中元素的顺序</p>
+<p>该方法会改变原来的数组，而不会创建新的数组。</p>
+<h4 id="slice-start-end"><a href="#slice-start-end" class="headerlink" title="slice(start, end)"></a>slice(start, end)</h4><p>从已有的数组中返回选定的元素。</p>
+<p>返回一个新的数组，<br>包含从 start 到 end(不包括end)的arrayObject中的元素<br>该方法并不会修改数组，而是返回一个子数组。</p>
+<p>start 为必填参数(数值)，开始选取的位置，若为负数<br>则从数组末尾开始往回数</p>
+<p>end 为可选参数，结束的位置，省略默认从start到数组末尾</p>
+<p>String.slice() 与 Array.slice() 相似。</p>
+<h4 id="sort-sortMethod"><a href="#sort-sortMethod" class="headerlink" title="sort(sortMethod)"></a>sort(sortMethod)</h4><p>使数组中的元素按照一定的顺序排列。</p>
+<p>sortMethod为可填参数，规定排序顺序，必须为函数<br>说明：</p>
+<p>1.如果不指定&lt;方法函数&gt;，则按unicode码顺序排列。<br>2.如果指定&lt;方法函数&gt;，则按&lt;方法函数&gt;所指定的排序方法排序。</p>
+<p>注意:</p>
+<p>该函数要比较两个值，<br>然后返回一个用于说明这两个值的相对顺序的数字。<br>比较函数应该具有两个参数 a 和 b，<br>其返回值如下： </p>
+<p>  若返回值&lt;=-1，则表示 A 在排序后的序列中出现在 B 之前。<br>  若返回值&gt;-1 &amp;&amp; <1，则表示 a="" 和="" b="" 具有相同的排序顺序。="" 若返回值="">=1，则表示 A 在排序后的序列中出现在 B 之后。</1，则表示></p>
+<p>升序：</p>
+<pre><code>function sortNum(a,b) 
+{
+      return a - b;
+     //如降序，把“a - b”该成“b - a”
 }
-},
-
-
-
-// firefox
-{ &quot;keys&quot;: [&quot;f3&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
-&quot;args&quot;: {
-&quot;paths&quot;: [],
-&quot;application&quot;: &quot;D:/Program Files (x86)/Mozilla Firefox/firefox.exe&quot;,
-&quot;extensions&quot;:&quot;.*&quot;
-}
-},
-
-
-
-// ie
-{ &quot;keys&quot;: [&quot;f4&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;,
-&quot;args&quot;: {
-&quot;paths&quot;: [],
-&quot;application&quot;: &quot;C:/Program Files/Internet Explorer/iexplore.exe&quot;,
-&quot;extensions&quot;:&quot;.*&quot;
-}
-}
-</code></pre><p>上面的代码中有两处需要注意的地方，<br>一个是keys表示快捷键，即f2可以启动chrome进行预览。<br>另一个是application，表示浏览器所在的安装路径，<br>只有路径配置正确，才能够正常调用浏览器</p>
-<h3 id="nettus-fetch插件"><a href="#nettus-fetch插件" class="headerlink" title="nettus fetch插件"></a>nettus fetch插件</h3><pre><code>ctrl+shift+p---&gt;输入nettus fetch回车
----&gt;ctrl_shift+p---&gt;输入fetch manage来管理配置文件
-</code></pre><p>使用fetch来下载jquery步骤：</p>
-<pre><code>ctrl+alt+n
-在某个目录下创建一个jQuery文件---&gt;
-在该文件中输入ctrl+shift+p---&gt;
-输入fetch file回车---&gt;jquery回车下载。
-</code></pre><p>在fetch配置文件中来增加新的类库（如：underscore.js）：<br>步骤如下：</p>
-<pre><code>在该文件中添加&quot;underscore&quot;:
-&quot;http://github.com
-/jashkenas/underscore/blob/master/underscore.min.js&quot;
-和前一个参数以&quot;逗号&quot;来分隔。
-ctrl+alt+n
-在某个目录下创建一个underscore文件---&gt;
-在该文件中输入ctrl+shift+p---&gt;
-输入fetch file回车---&gt;jquery回车下载。
-</code></pre><p>到github下载underscore.js文件<br>github上的underscore文件地址：</p>
-<pre><code>https://raw.githubusercontent.com/
-jashkenas/underscore/master/underscore-min.js
-</code></pre><h2 id="快捷键的使用"><a href="#快捷键的使用" class="headerlink" title="快捷键的使用"></a>快捷键的使用</h2><p>1、Ctrl+H：查找替换<br>2、Ctrl+D：选择游标所在单词，连续Ctrl+D实现多行选择<br>（选择与第一次选择相同的单词）<br>3、Ctrl+K Ctrl+D：跳过当前选择，选择下一个<br>4、Ctrl+shift+D：复制游标所在行<br>5、Ctrl+F3：选择所以与游标所在单词相同的单词<br>6、全选：先Ctrl+A全选然后Ctrl+shift+L产生游标<br>7、按住shift，右键，拖动，产生多行游标<br>8、Ctrl+P 的作用是：搜索项目中的文件 go to anything<br>9、Ctrl+Shift+P 快捷键的作用是：打开命令模式<br>10、Ctrl+Shift+K 的快捷键是：删除整行<br>11、ctrl+shift+v 保持缩进粘贴<br>12、Ctrl+] 增加缩进 [ 减小缩进。<br>13、Alt+. 闭合标签<br>14、Alt+&gt; 闭合标签<br>15、Ctrl+? 注释一行</p>
-
+</code></pre>
       
     </div>
     
@@ -503,7 +473,7 @@ jashkenas/underscore/master/underscore-min.js
       
         <div class="post-tags">
           
-            <a href="/sollylee.github.io/tags/前端工具/" rel="tag"><i class="fa fa-tag"></i> 前端工具</a>
+            <a href="/sollylee.github.io/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
           
         </div>
       
@@ -516,8 +486,8 @@ jashkenas/underscore/master/underscore-min.js
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/sollylee.github.io/2018/01/27/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/sollylee.github.io/2018/02/02/JavaScript进阶-一/" rel="next" title="JavaScript进阶(一)">
+                <i class="fa fa-chevron-left"></i> JavaScript进阶(一)
               </a>
             
           </div>
@@ -525,10 +495,6 @@ jashkenas/underscore/master/underscore-min.js
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/sollylee.github.io/2018/02/01/JavaScript入门/" rel="prev" title="JavaScript入门">
-                JavaScript入门 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -697,7 +663,7 @@ jashkenas/underscore/master/underscore-min.js
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些插件及与其相关的快捷键的使用："><span class="nav-number">1.</span> <span class="nav-text">一些插件及与其相关的快捷键的使用：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Emmet插件："><span class="nav-number">1.1.</span> <span class="nav-text">Emmet插件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insert-callback插件"><span class="nav-number">1.2.</span> <span class="nav-text">insert callback插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#advanNew"><span class="nav-number">1.3.</span> <span class="nav-text">advanNew</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#httpRequester"><span class="nav-number">1.4.</span> <span class="nav-text">httpRequester</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#netauke-Snip"><span class="nav-number">1.5.</span> <span class="nav-text">netauke Snip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sidebar-enhancement"><span class="nav-number">1.6.</span> <span class="nav-text">sidebar enhancement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docblockr"><span class="nav-number">1.7.</span> <span class="nav-text">docblockr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sublimelinter-jshlint"><span class="nav-number">1.8.</span> <span class="nav-text">sublimelinter-jshlint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SideBarEnhancements"><span class="nav-number">1.9.</span> <span class="nav-text">SideBarEnhancements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nettus-fetch插件"><span class="nav-number">1.10.</span> <span class="nav-text">nettus fetch插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键的使用"><span class="nav-number">2.</span> <span class="nav-text">快捷键的使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#js内置对象"><span class="nav-number">1.</span> <span class="nav-text">js内置对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Date-日期对象"><span class="nav-number">1.1.</span> <span class="nav-text">Date 日期对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串对象"><span class="nav-number">1.2.</span> <span class="nav-text">字符串对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#charAt-index"><span class="nav-number">1.2.1.</span> <span class="nav-text">charAt(index)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexOf-substring-startpos"><span class="nav-number">1.2.2.</span> <span class="nav-text">indexOf(substring, startpos)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串分割split-separator-limit"><span class="nav-number">1.2.3.</span> <span class="nav-text">字符串分割split(separator,limit)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#substring-startPos-stopPos"><span class="nav-number">1.2.4.</span> <span class="nav-text">substring(startPos,stopPos)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#substr-startPos-length"><span class="nav-number">1.2.5.</span> <span class="nav-text">substr(startPos,length)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Math对象"><span class="nav-number">1.3.</span> <span class="nav-text">Math对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组对象-补充"><span class="nav-number">1.4.</span> <span class="nav-text">数组对象(补充)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#concat-array1-array2-…-arrayN"><span class="nav-number">1.4.1.</span> <span class="nav-text">concat(array1,array2,…,arrayN)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#join-separator"><span class="nav-number">1.4.2.</span> <span class="nav-text">join(separator)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reverse"><span class="nav-number">1.4.3.</span> <span class="nav-text">reverse()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#slice-start-end"><span class="nav-number">1.4.4.</span> <span class="nav-text">slice(start, end)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sort-sortMethod"><span class="nav-number">1.4.5.</span> <span class="nav-text">sort(sortMethod)</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
