@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/sollylee.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/sollylee.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/sollylee.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/sollylee.github.io/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/sollylee.github.io/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/sollylee.github.io/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/sollylee.github.io/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+  <link rel="alternate" href="/sollylee.github.io/atom.xml" title="LISILE's Notes" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="js进阶学习four">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript进阶学习(四)">
+<meta property="og:url" content="https://sollylee.github.io/2018/02/08/JavaScript进阶学习-四/index.html">
+<meta property="og:site_name" content="LISILE&#39;s Notes">
+<meta property="og:description" content="js进阶学习four">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-09T07:48:54.753Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript进阶学习(四)">
+<meta name="twitter:description" content="js进阶学习four">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/sollylee.github.io/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://sollylee.github.io/2018/02/08/JavaScript进阶学习-四/"/>
+
+
+
+
+
+  <title>JavaScript进阶学习(四) | LISILE's Notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+    	<a href="https://github.com/sollylee"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/sollylee.github.io/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LISILE's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/sollylee.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/sollylee.github.io/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/sollylee.github.io/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/sollylee.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/sollylee.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sollylee.github.io/sollylee.github.io/2018/02/08/JavaScript进阶学习-四/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Solly Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/sollylee.github.io/images/金木.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LISILE's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaScript进阶学习(四)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-08T17:22:42+08:00">
+                2018-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/sollylee.github.io/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>js进阶学习four<br><a id="more"></a></p>
+<h2 id="DOM对象补充"><a href="#DOM对象补充" class="headerlink" title="DOM对象补充"></a>DOM对象补充</h2><p>###获取DOM对象方法</p>
+<pre><code>    方法                 说明                     获得
+
+getElementByID        通过指定id获取元素         一个
+getElementsByName  通过元素名称name属性获取元素  一组
+getElementsByTagName  通过标签名获取元素         一组
+</code></pre><h3 id="getAttribute"><a href="#getAttribute" class="headerlink" title="getAttribute()"></a>getAttribute()</h3><p>通过元素节点的属性名称获取属性的值。</p>
+<pre><code>elementNode.getAttribute(name)
+</code></pre><p>说明:<br>1.elementNode：元素节点。下同。<br>2.name：要想查询的元素节点的属性名字 如: id,title</p>
+<h3 id="setAttribute"><a href="#setAttribute" class="headerlink" title="setAttribute()"></a>setAttribute()</h3><p>方法增加一个指定名称和值的新属性，<br>或者把一个现有的属性设定为指定的值。</p>
+<p>   elementNode.setAttribute(name,value)</p>
+<p>说明：<br>1.name: 要设置的属性名。<br>2.value: 要设置的属性值。</p>
+<p>注意：<br>把指定的属性设置为指定的值<br>如果不存在具有指定名称的属性，该方法将创建一个新属性</p>
+<h3 id="节点属性"><a href="#节点属性" class="headerlink" title="节点属性"></a>节点属性</h3><p>在文档对象模型 (DOM) 中，每个节点都是一个对象。</p>
+<p>DOM 节点有三个重要的属性 ：</p>
+<pre><code>nodeName   节点的名称
+ nodeValue  节点的值
+nodeType   节点的类型
+</code></pre><h4 id="nodeName"><a href="#nodeName" class="headerlink" title="nodeName"></a>nodeName</h4><p>节点的名称，是只读的。</p>
+<pre><code>元素节点的 nodeName 与标签名相同
+属性节点的 nodeName 是属性的名称
+文本节点的 nodeName 永远是 #text
+文档节点的 nodeName 永远是 #document
+</code></pre><h4 id="nodeValue"><a href="#nodeValue" class="headerlink" title="nodeValue"></a>nodeValue</h4><p>节点的值</p>
+<pre><code>元素节点的 nodeValue 是 undefined 或 null
+文本节点的 nodeValue 是文本自身
+属性节点的 nodeValue 是属性的值
+</code></pre><h4 id="nodeType"><a href="#nodeType" class="headerlink" title="nodeType"></a>nodeType</h4><p>节点的类型，是只读的。<br>以下常用的几种结点类型:</p>
+<pre><code>元素类型    节点类型
+  元素          1
+  属性          2
+  文本          3
+  注释          8
+  文档          9
+</code></pre><h3 id="访问子节点childNodes"><a href="#访问子节点childNodes" class="headerlink" title="访问子节点childNodes"></a>访问子节点childNodes</h3><p>访问选定元素节点下的所有子节点的列表，<br>返回的值可以看作是一个数组，它具有length属性</p>
+<pre><code>elementNode.childNodes
+</code></pre><p>注意：<br>1.如果选定的节点没有子节点，<br>  则该属性返回不包含节点的 NodeList<br>2.IE全系列、firefox、chrome、opera、safari兼容问题<br>3.节点之间的空白符，<br>  在firefox、chrome、opera、safari浏览器是文本节点</p>
+<p>####firstChild<br>返回‘childNodes’数组的第一个子节点。<br>如果选定的节点没有子节点，则该属性返回 NULL。</p>
+<pre><code>node.firstChild
+</code></pre><p>说明：<br>与elementNode.childNodes[0]是同样的效果。 </p>
+<p>####lastChild<br>返回‘childNodes’数组的最后一个子节点。<br>如果选定的节点没有子节点，则该属性返回 NULL。</p>
+<pre><code>node.lastChild
+</code></pre><p>说明：<br>elementNode.childNodes[elementNode.childNodes.length-1]<br>是同样的效果。</p>
+<h3 id="访问父节点parentNode"><a href="#访问父节点parentNode" class="headerlink" title="访问父节点parentNode"></a>访问父节点parentNode</h3><p>获取指定节点的父节点</p>
+<pre><code>elementNode.parentNode
+</code></pre><p>若想继续指向祖节点可以继续加上 .parenetNode<br>eg:    </p>
+<pre><code>elementNode.parentNode.parentNode
+</code></pre><p>###访问兄弟节点</p>
+<h4 id="nextSibling"><a href="#nextSibling" class="headerlink" title="nextSibling"></a>nextSibling</h4><p>可返回某个节点之后紧跟的节点（处于同一树层级中）</p>
+<pre><code>nodeObject.nextSibling
+</code></pre><p>说明：如果无此节点，则该属性返回 null。</p>
+<p>####previousSibling<br>可返回某个节点之前紧跟的节点（处于同一树层级中）</p>
+<pre><code>nodeObject.previousSibling  
+</code></pre><p>说明：如果无此节点，则该属性返回 null。</p>
+<p>注意: 两个属性获取的是节点。<br>Internet Explorer 会忽略节点间生成的空白文本节点(如换行符号)<br>而其它浏览器不会忽略。</p>
+<p>可以通过判断该节点的nodeType是否为1，来知道是否为元素节点</p>
+<h3 id="appendChild"><a href="#appendChild" class="headerlink" title="appendChild()"></a>appendChild()</h3><p>在指定节点的最后一个子节点列表之后添加一个新的子节点</p>
+<pre><code>appendChild(newnode)
+</code></pre><p>说明：<br>newnode：指定追加的节点</p>
+<h3 id="insertBefore"><a href="#insertBefore" class="headerlink" title="insertBefore()"></a>insertBefore()</h3><p>在已有的子节点前插入一个新的子节点。</p>
+<pre><code>insertBefore(newnode,node);
+</code></pre><p>说明：<br>newnode: 要插入的新节点<br>node: 指定此节点前插入节点</p>
+<p>注意: otest.insertBefore(newnode,node);也可以改为:<br>      otest.insertBefore(newnode,otest.childNodes[0]);</p>
+<h3 id="removeChild"><a href="#removeChild" class="headerlink" title="removeChild()"></a>removeChild()</h3><p>从子节点列表中删除某个节点<br>如删除成功，返回被删除的节点<br>如失败，则返回 NULL</p>
+<pre><code>nodeObject.removeChild(node)
+</code></pre><p>说明:<br>node：必需，指定需要删除的节点</p>
+<p>注意: 把删除的子节点赋值给x，这个子节点不在DOM树中<br>      但是还存在内存中，可通过 x 操作<br>      如果要完全删除对象，给 x 赋 null 值。</p>
+<h3 id="replaceChild"><a href="#replaceChild" class="headerlink" title="replaceChild()"></a>replaceChild()</h3><p>实现子节点(对象)的替换。返回被替换对象的引用。 </p>
+<p>   node.replaceChild (newnode,oldnew) </p>
+<p>参数:<br>newnode: 必需，用于替换 oldnew 的对象<br>oldnew: 必需，被 newnode 替换的对象</p>
+<p>注意:<br>1.当 oldnode 被替换时，所有与之相关的属性内容都将被移除<br>2.newnode 必须先被建立。 </p>
+<h3 id="createElement"><a href="#createElement" class="headerlink" title="createElement()"></a>createElement()</h3><p>可创建元素节点,返回一个 Element 对象</p>
+<pre><code>document.createElement(tagName)
+</code></pre><p>说明:<br>tagName：字符串值，这个字符串用来指明创建元素的类型<br>注意：要与appendChild() 或 insertBefore()<br>      方法联合使用，将元素显示在页面中。</p>
+<p>调用方式:<br>eg:创建一个连接</p>
+<pre><code>var main = document.body;
+var at=document.createElement(&quot;a&quot;);
+main.appendChild(at);
+</code></pre><h3 id="createTextNode"><a href="#createTextNode" class="headerlink" title="createTextNode()"></a>createTextNode()</h3><p>创建新的文本节点，返回新创建的 Text 节点</p>
+<pre><code>document.createTextNode(data)
+</code></pre><p>说明：<br>data : 字符串值，可规定此节点的文本。</p>
+<p>调用方式:<br>eg:创建一个div，并在里面写上”i love JaveScript”</p>
+<p>  var element=document.createElement(“div”);<br>  var text=document.createTextNode(“i love JaveScript”);<br>  element.appendChild(text);<br>  document.body.appendChild(element);</p>
+<h3 id="clientHeight-amp-amp-clientWidth"><a href="#clientHeight-amp-amp-clientWidth" class="headerlink" title="clientHeight&amp;&amp;clientWidth"></a>clientHeight&amp;&amp;clientWidth</h3><p>获得浏览器窗口的尺寸（浏览器的视口，不包括工具栏和滚动条）<br>在不同浏览器都实用的 JavaScript 方案：</p>
+<pre><code>var w= document.documentElement.clientWidth
+      || document.body.clientWidth;
+var h= document.documentElement.clientHeight
+      || document.body.clientHeight;
+</code></pre><h3 id="scrollHeight-amp-amp-scrollWidth"><a href="#scrollHeight-amp-amp-scrollWidth" class="headerlink" title="scrollHeight&amp;&amp;scrollWidth"></a>scrollHeight&amp;&amp;scrollWidth</h3><p>获取网页内容高度和宽度。</p>
+<pre><code>var w=document.documentElement.scrollWidth
+           || document.body.scrollWidth;
+var h=document.documentElement.scrollHeight
+          || document.body.scrollHeight;
+</code></pre><h3 id="offsetHeight-amp-amp-offsetWidth"><a href="#offsetHeight-amp-amp-offsetWidth" class="headerlink" title="offsetHeight&amp;&amp;offsetWidth"></a>offsetHeight&amp;&amp;offsetWidth</h3><p>获取网页内容高度和宽度<br>(包括滚动条等边线，会随窗口的显示大小改变)<br>offsetHeight = clientHeight + 滚动条 + 边框。</p>
+<pre><code>var w= document.documentElement.offsetWidth
+    || document.body.offsetWidth;
+var h= document.documentElement.offsetHeight
+    || document.body.offsetHeight;
+</code></pre><h3 id="网页卷去的距离与偏移量"><a href="#网页卷去的距离与偏移量" class="headerlink" title="网页卷去的距离与偏移量"></a>网页卷去的距离与偏移量</h3><pre><code>scrollLeft:设置或获取位于给定对象左边界
+           与窗口中目前可见内容的最左端之间的距离 
+
+scrollTop:设置或获取位于对象最顶端
+          与窗口中可见内容的最顶端之间的距离 
+
+offsetLeft:获取指定对象相对于版面
+           或由offsetParent属性指定的
+           父坐标的计算左侧位置
+
+offsetTop:获取指定对象相对于版面
+          或由offsetParent属性指定的
+          父坐标的计算顶端位置
+</code></pre><p>注意:<br>offsetParent：布局中设置postion属性<br>              (Relative、Absolute、fixed)的父容器<br>              从最近的父节点开始，一层层向上找<br>              直到HTML的body</p>
+<p>参考:<br><a href="http://blog.csdn.net/xiebaochun/article/details/38382169" target="_blank" rel="noopener">http://blog.csdn.net/xiebaochun/article/details/38382169</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/sollylee.github.io/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/sollylee.github.io/2018/02/08/JavaScript进阶-三/" rel="next" title="JavaScript进阶(三)">
+                <i class="fa fa-chevron-left"></i> JavaScript进阶(三)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/sollylee.github.io/images/金木.jpg"
+                alt="Solly Lee" />
+            
+              <p class="site-author-name" itemprop="name">Solly Lee</p>
+              <p class="site-description motion-element" itemprop="description">Go big or go home</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/sollylee.github.io/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/sollylee.github.io/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/sollylee.github.io/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/sollylee.github.io/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://ife.baidu.com/" title="百度前端技术学院" target="_blank">百度前端技术学院</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.imooc.com/" title="慕课网" target="_blank">慕课网</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM对象补充"><span class="nav-number">1.</span> <span class="nav-text">DOM对象补充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#getAttribute"><span class="nav-number">1.1.</span> <span class="nav-text">getAttribute()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setAttribute"><span class="nav-number">1.2.</span> <span class="nav-text">setAttribute()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节点属性"><span class="nav-number">1.3.</span> <span class="nav-text">节点属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nodeName"><span class="nav-number">1.3.1.</span> <span class="nav-text">nodeName</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nodeValue"><span class="nav-number">1.3.2.</span> <span class="nav-text">nodeValue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nodeType"><span class="nav-number">1.3.3.</span> <span class="nav-text">nodeType</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问子节点childNodes"><span class="nav-number">1.4.</span> <span class="nav-text">访问子节点childNodes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问父节点parentNode"><span class="nav-number">1.5.</span> <span class="nav-text">访问父节点parentNode</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nextSibling"><span class="nav-number">1.5.1.</span> <span class="nav-text">nextSibling</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#appendChild"><span class="nav-number">1.6.</span> <span class="nav-text">appendChild()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insertBefore"><span class="nav-number">1.7.</span> <span class="nav-text">insertBefore()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#removeChild"><span class="nav-number">1.8.</span> <span class="nav-text">removeChild()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#replaceChild"><span class="nav-number">1.9.</span> <span class="nav-text">replaceChild()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#createElement"><span class="nav-number">1.10.</span> <span class="nav-text">createElement()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#createTextNode"><span class="nav-number">1.11.</span> <span class="nav-text">createTextNode()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clientHeight-amp-amp-clientWidth"><span class="nav-number">1.12.</span> <span class="nav-text">clientHeight&amp;&amp;clientWidth</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scrollHeight-amp-amp-scrollWidth"><span class="nav-number">1.13.</span> <span class="nav-text">scrollHeight&amp;&amp;scrollWidth</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#offsetHeight-amp-amp-offsetWidth"><span class="nav-number">1.14.</span> <span class="nav-text">offsetHeight&amp;&amp;offsetWidth</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网页卷去的距离与偏移量"><span class="nav-number">1.15.</span> <span class="nav-text">网页卷去的距离与偏移量</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Solly Lee</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/sollylee.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/sollylee.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/sollylee.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/sollylee.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/sollylee.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
