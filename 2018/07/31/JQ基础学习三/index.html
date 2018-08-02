@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LISILE&#39;s Notes">
 <meta property="og:description" content="JQ事件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-02T07:16:17.625Z">
+<meta property="og:updated_time" content="2018-08-02T07:29:23.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JQ基础学习(三)">
 <meta name="twitter:description" content="JQ事件">
@@ -436,7 +436,7 @@ $ele.focusout(handler)
 $ele.focusout( [eventData ], handler )
 </code></pre><h1 id="JQ表单事件"><a href="#JQ表单事件" class="headerlink" title="JQ表单事件"></a>JQ表单事件</h1><h2 id="blur-与focus"><a href="#blur-与focus" class="headerlink" title="blur()与focus()"></a>blur()与focus()</h2><p>用于处理表单焦点<br>blur()与focus()和focusin()与focusout()用法类似</p>
 <p>区别:<br>focus()在元素本身产生，focusin()在元素包含的元素中产生<br>blur与focusout也亦是如此</p>
-<h2 id="change"><a href="#change" class="headerlink" title="change()"></a>change()</h2><p><input>元素,<textarea>和</textarea><select>元素的值都是可以发生改变的<br>可以通过change事件去监听这些改变的动作</select></p>
+<h2 id="change"><a href="#change" class="headerlink" title="change()"></a>change()</h2><p>&lt; input &gt;元素,&lt; textarea &gt;和&lt; select &gt;元素的值<br>都是可以发生改变的,可以通过change事件去监听这些改变的动作</p>
 <p>change()用法与click()用法类似</p>
 <p>input元素:</p>
 <pre><code>监听value值的变化，当有改变时，失去焦点后触发change事件。
@@ -453,7 +453,7 @@ $ele.select(handler(eventObject))
 $ele.select([eventData], handler(eventObject))
 </code></pre><p>注意:</p>
 <p>这个函数会调用执行绑定到select事件的所有函数,包括浏览器的默认行为<br>可以通过在某个绑定的函数中返回false来防止触发浏览器的默认行为</p>
-<p>2.select事件只能用于<input>元素与<textarea>元素</textarea></p>
+<p>2.select事件只能用于&lt; input &gt;元素与&lt; textarea &gt;元素</p>
 <h2 id="submit"><a href="#submit" class="headerlink" title="submit()"></a>submit()</h2><p>通过submit事件，监听提交表单的这个动作<br>submit()用法与click()用法类似</p>
 <pre><code>$ele.submit()
 

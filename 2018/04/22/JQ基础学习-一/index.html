@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LISILE&#39;s Notes">
 <meta property="og:description" content="JQ样式">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-02T07:16:12.917Z">
+<meta property="og:updated_time" content="2018-08-02T07:33:51.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JQ基础学习(一)">
 <meta name="twitter:description" content="JQ样式">
@@ -531,8 +531,10 @@ attr(attributes)         给指定元素设置多个属性值,
 <p>(1)通过.val()处理select元素，当没有选择项被选中，它返回null</p>
 <p>(2).val()方法多用来设置表单的字段的值</p>
 <p>(3)如果select元素有multiple（多选）属性<br>   并且至少一个选择项被选中,.val()方法返回一个数组<br>   这个数组包含每个选中选择项的值</p>
-<h2 id="html-text-和-val-的差异总结"><a href="#html-text-和-val-的差异总结" class="headerlink" title=".html(),.text()和.val()的差异总结"></a>.html(),.text()和.val()的差异总结</h2><p>1.<br>    .html(),.text(),.val()<br>    三种方法都是用来读取选定元素的内容；</p>
-<pre><code>只不过.html()是用来读取元素的html内容(包括html标签)
+<h2 id="html-text-和-val-的差异总结"><a href="#html-text-和-val-的差异总结" class="headerlink" title=".html(),.text()和.val()的差异总结"></a>.html(),.text()和.val()的差异总结</h2><pre><code>1  .html(),.text(),.val()
+三种方法都是用来读取选定元素的内容；
+
+只不过.html()是用来读取元素的html内容(包括html标签)
 .text()用来读取元素的纯文本内容，包括其后代元素
 .val()是用来读取表单元素的&quot;value&quot;值。
 
@@ -545,8 +547,14 @@ attr(attributes)         给指定元素设置多个属性值,
 
 但是.text()和他们不一样，如果.text()应用在多个元素上时，
 将会读取所有选中元素的文本内容。
-</code></pre><p>2.<br>    .html(htmlString),.text(textString)和.val(value)<br>    三种方法都是用来替换选中元素的内容，<br>    如果三个方法同时运用在多个元素上时，<br>    那么将会替换所有选中元素的内容。</p>
-<pre><code>.html(),.text(),.val()
+
+
+2 .html(htmlString),.text(textString)和.val(value)
+三种方法都是用来替换选中元素的内容，
+如果三个方法同时运用在多个元素上时，
+那么将会替换所有选中元素的内容。
+
+.html(),.text(),.val()
 都可以使用回调函数的返回值来动态的改变多个元素的内容。
 </code></pre><h2 id="addClass-与removeClass"><a href="#addClass-与removeClass" class="headerlink" title="addClass()与removeClass()"></a>addClass()与removeClass()</h2><p>.addClass(className)方法</p>
 <pre><code>.addClass(className) 
