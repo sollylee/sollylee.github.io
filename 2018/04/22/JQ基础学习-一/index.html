@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/sollylee.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/sollylee.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/sollylee.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/sollylee.github.io/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/sollylee.github.io/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/sollylee.github.io/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/sollylee.github.io/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JQ," />
+
+
+
+
+
+  <link rel="alternate" href="/sollylee.github.io/atom.xml" title="LISILE's Notes" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="JQ样式">
+<meta name="keywords" content="JQ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JQ基础学习(一)">
+<meta property="og:url" content="https://sollylee.github.io/2018/04/22/JQ基础学习-一/index.html">
+<meta property="og:site_name" content="LISILE&#39;s Notes">
+<meta property="og:description" content="JQ样式">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-26T00:01:54.785Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JQ基础学习(一)">
+<meta name="twitter:description" content="JQ样式">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/sollylee.github.io/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://sollylee.github.io/2018/04/22/JQ基础学习-一/"/>
+
+
+
+
+
+  <title>JQ基础学习(一) | LISILE's Notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+    	<a href="https://github.com/sollylee"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/sollylee.github.io/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LISILE's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/sollylee.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/sollylee.github.io/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/sollylee.github.io/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/sollylee.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/sollylee.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sollylee.github.io/sollylee.github.io/2018/04/22/JQ基础学习-一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Solly Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/sollylee.github.io/images/金木.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LISILE's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JQ基础学习(一)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-22T19:47:53+08:00">
+                2018-04-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/sollylee.github.io/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>JQ样式<br><a id="more"></a></p>
+<p>#JQ基础知识</p>
+<p>$(document).ready 的作用是等页面的文档<br>（document）中的节点都加载完毕后，再执行后续的代码</p>
+<p>通过jQuery方法包装后的对象，是一个类数组对象。<br>它与DOM对象完全不同，唯一相似的是它们都能操作DOM。</p>
+<p>##JQ对象转换为DOM对象</p>
+<p>1.利用数组下标的方式读取到jQuery中的DOM对象</p>
+<pre><code>var $div = $(&apos;div&apos;) //jQuery对象
+var div = $div[0] //转化成DOM对象
+</code></pre><p>2.通过jQuery自带的get()方法<br>jQuery对象自身提供一个.get() 方法允许我们直接访问jQuery对象中相关的DOM节点</p>
+<pre><code>var $div = $(&apos;div&apos;) //jQuery对象
+var div = $div.get(0) //通过get方法,转化成DOM对象
+</code></pre><p>##DOM对象转换为JQ对象</p>
+<p>如果传递给$(DOM)函数的参数是一个DOM对象，<br>jQuery方法会把这个DOM对象给包装成一个新的jQuery对象</p>
+<pre><code>var div = document.getElementsByTagName(&apos;div&apos;); //dom对象
+var $div = $(div); //jQuery对象
+</code></pre><p>#JQ选择器</p>
+<p>##id选择器<br>通过元素的id名获取节点</p>
+<pre><code>$( &quot;#id&quot; )
+</code></pre><p>##类选择器<br>通过class样式类名来获取节点</p>
+<pre><code>$( &quot;.class&quot; )
+</code></pre><p>##元素选择器<br>根据给定（html）标记名称选择所有的元素</p>
+<pre><code>$( &quot;element&quot; )
+</code></pre><p>##全选择器<br>通过传递 ‘星号’ 选择器来选中文档页面中的元素</p>
+<pre><code>$( &quot;*&quot; )
+</code></pre><p>##层级选择器</p>
+<p>###子选择器<br>选择所有指定”parent”元素中指定的”child”的直接子元素</p>
+<pre><code>$(&quot;parent&gt;child&quot;)
+</code></pre><p>###后代选择器<br>选择给定的”ancestor”元素的所有后代元素</p>
+<pre><code>$(&quot;ancestor descendant&quot;)
+</code></pre><p>###相邻兄弟选择器<br>选择所有紧接在”prev”元素后的”next”元素</p>
+<pre><code>$(&quot;prev+next&quot;)
+</code></pre><p>###一般兄弟选择器<br>匹配”prev”元素之后的所有兄弟元素,具有相同的父元素<br>并匹配过滤”siblings”选择器</p>
+<pre><code>$(&quot;prev~siblings&quot;)
+</code></pre><p>##基本筛选选择器</p>
+<pre><code>$(&quot;:first&quot;)            匹配第一个元素
+$(&quot;:last&quot;)            匹配最后一个元素
+$(&quot;:not(seletor)&quot;)    选择所有元素除去不匹配给定
+                    的选择器元素
+$(&quot;:eq(index)&quot;)        在匹配的集合中选择索引为index的元素
+$(&quot;:gt(index)&quot;)        在匹配的集合中选择索引大于index的元素
+$(&quot;:lt(index)&quot;)        在匹配的集合中选择索引小于index的元素
+$(&quot;:even&quot;)            选择索引值为偶数的元素,从零开始计数
+$(&quot;:odd&quot;)            选择索引值为奇数的元素,从零开始计数
+$(&quot;:header&quot;)        选择所有标题元素,e.g.:h1,h2...
+$(&quot;:lang(language)&quot;)    选择指定语言的所有元素
+$(&quot;:root&quot;)            选择该文档的根元素
+$(&quot;:animated&quot;)        选择所有正在执行动画效果的元素
+</code></pre><p>注意事项：</p>
+<p>1.<br>:eq(), :lt(), :gt(), :even, :odd<br>用来筛选他们前面的匹配表达式的集合元素，<br>根据之前匹配的元素在进一步筛选<br>注意jQuery合集都是从0开始索引</p>
+<p>2.<br>gt是一个段落筛选，从指定索引的下一个开始，<br>gt(1) 实际从2开始</p>
+<p>##内容筛选选择器</p>
+<pre><code>$(&quot;:contains(text)&quot;)    选择所有包含指定文本的元素
+$(&quot;:parent&quot;)            选择所有含有子元素或者文本的元素
+$(&quot;:empty&quot;)                选择所有没有子元素的元素(包括文本)
+$(&quot;:has(selector)&quot;)        选择元素中至少包含指定选择器的元素
+</code></pre><p>注意事项：</p>
+<p>1.<br>:contains与:has都有查找的意思，<br>但是contains查找包含“指定文本”的元素，<br>has查找包含“指定元素”的元素</p>
+<p>2.<br>如果:contains匹配的文本包含在元素的子元素中，<br>同样认为是符合条件的。:parent与:empty是相反的，<br>两者所涉及的子元素，包括文本节点</p>
+<p>##可见性筛选选择器</p>
+<pre><code>$(&quot;:visible&quot;)    选择所有显示的元素
+$(&quot;:hidden&quot;)    选择所有隐藏的元素
+</code></pre><p>Note:</p>
+<p>1.<br>:hidden选择器，<br>不仅仅包含样式是display=”none”的元素，<br>还包括隐藏表单、visibility等等</p>
+<p>2.<br>我们有几种方式可以隐藏一个元素：</p>
+<pre><code>(1) CSS display的值是none。
+(2) type=&quot;hidden&quot;的表单元素。
+(3) 宽度和高度都显式设置为0。
+(4) 一个祖先元素是隐藏的，该元素是不会在页面上显示
+(5) CSS visibility的值是hidden
+(6) CSS opacity的指是0
+</code></pre><p>3.<br>如果元素中占据文档中一定的空间,元素被认为是可见的。<br>可见元素的宽度或高度，是大于零。<br>元素的visibility: hidden 或 opacity: 0被认为是可见的，因为他们仍然占用空间布局。</p>
+<p>4.<br>不在文档中的元素是被认为是不可见的，<br>如果当他们被插入到文档中<br>jQuery没有办法知道他们是否是可见的，<br>因为元素可见性依赖于适用的样式</p>
+<p>##属性筛选选择器</p>
+<pre><code>$(&quot;[attribute|=&apos;value&apos;]&quot;)
+选择指定属性值等于给定字符串或以该文字串为前缀的元素
+
+$(&quot;[attribute*=&apos;value&apos;]&quot;)
+选择指定属性值具有包含一个给定的子符串的元素
+(选择给定的属性是以包含某些值的元素)
+
+$(&quot;[attribute~=&apos;value&apos;]&quot;)
+选择指定属性用空格分隔的值中包含一个给定值的元素
+
+$(&quot;[attribute=&apos;value&apos;]&quot;)
+选择指定属性是给定值的元素
+
+$(&quot;[attribute!=&apos;value&apos;]&quot;)
+选择不存在指定属性或者指定属性不等于给定值的元素
+
+$(&quot;[attribute^=&apos;value&apos;]&quot;)
+选择指定属性是以给定字符串开始的元素
+
+$(&quot;[attribute$=&apos;value&apos;]&quot;)
+选择指定属性是以给定值结尾的元素,区分大小写
+
+$(&quot;[attribute]&quot;)
+选择所有具有指定属性的元素,该元素可以是任意值
+
+$(&quot;[attributeFilter1][attributeFilterN]&quot;)
+选择匹配所有指定的属性筛选器的元素
+</code></pre><p>##子元素筛选选择器</p>
+<pre><code>$(&quot;first-child&quot;)    选择所有父级元素下的第一个子元素
+$(&quot;last-child&quot;)        选择所有父级元素下的最后一个子元素
+$(&quot;:only-child&quot;)    若某元素是其父元素的唯一的子元素,
+                    那么它就会被选中
+$(&quot;:nth-child&quot;)        选择的他们所有父级的第n个子元素
+$(&quot;:nth-last-child&quot;)    选择所有他们父元素的第n个子元素,
+                        计数从最后一个元素开始到第一个
+</code></pre><p>注意事项：</p>
+<p>(1)<br>:first只匹配一个单独的元素，<br>但是:first-child选择器可以匹配多个：<br>即为每个父级元素匹配第一个子元素。<br>这相当于:nth-child(1)</p>
+<p>(2)<br>:last 只匹配一个单独的元素，<br> :last-child选择器可以匹配多个元素：即，<br> 为每个父级元素匹配最后一个子元素</p>
+<p>(3)<br>如果子元素只有一个的话，<br>:first-child与:last-child是同一个<br> :only-child匹配某个元素是父元素中唯一的子元素，<br> 就是说当前子元素是父元素中唯一的元素，则匹配</p>
+<p>(4)<br>jQuery实现:nth-child(n)是严格来自CSS规范，<br>所以n值是“索引”，也就是说，从1开始计数，<br>:nth-child(index)从1开始的，<br>而eq(index)是从0开始的</p>
+<p>(5)<br>nth-child(n) 与 :nth-last-child(n) 的区别前者是从前往后计算，后者从后往前计算</p>
+<p>##表单元素选择器</p>
+<pre><code>$(&quot;:input&quot;)        
+选择所有input,textarea,select和button元素
+
+$(&quot;:text&quot;)        匹配所有文本框
+$(&quot;:password&quot;)    匹配所有密码框
+$(&quot;:radio&quot;)        匹配所有单选按钮
+$(&quot;:checkbox&quot;)    匹配所有复选框
+$(&quot;:submit&quot;)    匹配所有提交按钮
+$(&quot;:image&quot;)        匹配所有图像域
+$(&quot;:reset&quot;)        匹配所有重置按钮
+$(&quot;:button&quot;)    匹配所有按钮
+$(&quot;:file&quot;)        匹配所有文件域
+</code></pre><p>注意事项：</p>
+<p>除了input筛选选择器，<br>几乎每个表单类别筛选器都对应一个input元素的type值。<br>大部分表单类别筛选器可以使用属性筛选器替换。<br>比如 $(‘:password’) == $(‘[type=password]’)</p>
+<p>##表单元素筛选选择器</p>
+<pre><code>$(&quot;:enabled&quot;)        选取可用的表单元素
+$(&quot;:disabled&quot;)        选取不可用的表单元素
+$(&quot;:checked&quot;)        选取被选中的input元素
+$(&quot;:selected&quot;)        选取被选中的option元素
+</code></pre><p>注意事项：</p>
+<p>(1)<br>选择器适用于复选框和单选框，<br>对于下拉框元素, 使用 :selected 选择器</p>
+<p>(2)<br>在某些浏览器中<br>选择器:checked可能会错误选取到option元素<br>所以保险起见换用选择器input:checked<br>确保只会选取input元素</p>
+<p>#JQ的属性与样式</p>
+<p>##attr()与removeAttr()</p>
+<p>attar()方法</p>
+<p>attr()方法用来获取和设置元素属性<br>attr是attribute（属性）的缩写<br>在jQuery DOM操作中会经常用到attr()</p>
+<p>attr()有4个表达式</p>
+<pre><code>attr(传入属性名)            获取属性的值
+attr(属性名, 属性值)        设置属性的值
+attr(属性名,函数值)        设置属性的函数值
+attr(attributes)         给指定元素设置多个属性值,
+即{属性名一: “属性值一”, 属性名二: “属性值二”,...}
+</code></pre><p>removeAttr()删除方法</p>
+<pre><code>.removeAttr( attributeName )为匹配的元素集合中的每个元素中移除一个属性(attribute)
+</code></pre><p>注意:</p>
+<p>Attribute就是dom节点自带的属性<br>Property是这个DOM元素作为对象，其附加的内容</p>
+<p>获取Attribute就需要用attr,获取Property就需要用prop</p>
+<p>##.html()与.text()</p>
+<p>.html()方法</p>
+<p>获取集合中第一个匹配元素的HTML内容<br>或设置每一个匹配元素的html内容，<br>具体有3种用法：</p>
+<pre><code>.html()     
+不传入值,就是获取集合中第一个匹配元素的HTML内容
+
+.html(htmlString)
+设置每一个匹配元素的html内容
+
+.html(function(index, oldhtml))
+用来返回设置HTML内容的一个函数
+</code></pre><p>.text()方法<br>得到匹配元素集合中每个元素的文本内容结合<br>包括他们的后代或<br>设置匹配元素集合中每个元素的文本内容为指定的文本内容。</p>
+<p>具体有3种用法：</p>
+<pre><code>.text() 
+得到匹配元素集合中每个元素的合并文本,包括他们的后代
+
+.text(textString) 
+用于设置匹配元素内容的文本
+
+.text(function(index, text)) 
+用来返回设置文本内容的一个函数
+</code></pre><p>注意:</p>
+<p>(1).html()方法内部使用的是DOM的innerHTML属性来处理的<br>    所以在设置与获取上需要注意的一个最重要的问题，<br>    这个操作是针对整个HTML内容(不仅仅只是文本内容)</p>
+<p>(2).text()结果返回一个字符串,包含所有匹配元素的合并文本</p>
+<p>两者的异同:</p>
+<p>(1).html与.text的方法操作是一样,只是在具体针对处理对象不同</p>
+<p>(2).html处理的是元素内容,.text处理的是文本内容</p>
+<p>(3).html只能使用在HTML文档中,<br>   .text 在XML 和 HTML 文档中都能使用</p>
+<p>(4)如果处理的对象只有一个子文本节点,<br>   那么html处理的结果与text是一样的</p>
+<p>(5)火狐不支持innerText属性，用了类似的textContent属性<br>   .text()方法综合了2个属性的支持，所以可以兼容所有浏览器</p>
+<p>##.val()<br>.val()方法</p>
+<pre><code>.val()         无参数，获取匹配的元素集合中第一个元素的当前值
+.val(value)        设置匹配的元素集合中每个元素的值
+.val(function)    一个用来返回设置值的函数
+</code></pre><p>注意:</p>
+<p>(1)通过.val()处理select元素，当没有选择项被选中，它返回null</p>
+<p>(2).val()方法多用来设置表单的字段的值</p>
+<p>(3)如果select元素有multiple（多选）属性<br>   并且至少一个选择项被选中,.val()方法返回一个数组<br>   这个数组包含每个选中选择项的值</p>
+<p>##.html(),.text()和.val()的差异总结</p>
+<p>1.<br>    .html(),.text(),.val()<br>    三种方法都是用来读取选定元素的内容；</p>
+<pre><code>只不过.html()是用来读取元素的html内容(包括html标签)
+.text()用来读取元素的纯文本内容，包括其后代元素
+.val()是用来读取表单元素的&quot;value&quot;值。
+
+其中.html()和.text()方法不能使用在表单元素上,
+而.val()只能使用在表单元素上；
+
+另外.html()方法使用在多个元素上时，只读取第一个元素；
+.val()方法和.html()相同，如果其应用在多个元素上时，
+只能读取第一个表单元素的&quot;value&quot;值
+
+但是.text()和他们不一样，如果.text()应用在多个元素上时，
+将会读取所有选中元素的文本内容。
+</code></pre><p>2.<br>    .html(htmlString),.text(textString)和.val(value)<br>    三种方法都是用来替换选中元素的内容，<br>    如果三个方法同时运用在多个元素上时，<br>    那么将会替换所有选中元素的内容。</p>
+<pre><code>.html(),.text(),.val()
+都可以使用回调函数的返回值来动态的改变多个元素的内容。
+</code></pre><p>##addClass()与removeClass()<br>.addClass(className)方法</p>
+<pre><code>.addClass(className) 
+ 为每个匹配元素所要增加的一个或多个样式名
+
+.addClass(function(index, currentClass)) 这个函数返回一个或更多用空格隔开的要增加的样式名
+</code></pre><p>注意事项：</p>
+<p>.addClass()方法不会替换一个样式类名。<br>它只是简单的添加一个样式类名到元素上</p>
+<p>.removeClass( )方法</p>
+<pre><code>.removeClass([className])
+每个匹配元素移除的一个或多个用空格隔开的样式名
+
+.removeClass( function(index, class) )一个函数，返回一个或多个将要被移除的样式名
+</code></pre><p>注意事项:</p>
+<p>如果一个样式类名作为一个参数,<br>只有这样式类会被从匹配的元素集合中删除 。 如果没有样式名作为参数，那么所有的样式类将被移除</p>
+<p>##toggleClass()<br>在匹配的元素集合中的每个元素上添加或删除一个或多个样式类<br>取决于这个样式类是否存在或值切换属性。<br>即：如果存在（不存在）就删除（添加）一个类</p>
+<pre><code>.toggleClass(className)：
+在匹配的元素集合中的每个元素上
+用来切换的一个或多个(用空格隔开)样式类名
+
+.toggleClass(className, switch )：一个布尔值，用于判断样式是否应该被添加或移除
+
+.toggleClass([switch])
+一个用来判断样式类添加还是移除的 布尔值
+
+.toggleClass(function(index, class, switch) [, switch])
+用来返回在匹配的元素集合中的每个元素上
+用来切换的样式类名的一个函数。
+接收元素的索引位置和元素旧的样式类作为参数
+</code></pre><p>注意事项：</p>
+<p>(1)<br>toggleClass是一个互斥的逻辑，<br>也就是通过判断对应的元素上是否存在指定的Class名，<br>如果有就删除，如果没有就增加</p>
+<p>(2)<br>toggleClass会保留原有的Class名后新增，通过空格隔开</p>
+<p>##.css()<br>获取元素样式属性的计算值或者设置元素的CSS属性</p>
+<p>获取：</p>
+<pre><code>.css( propertyName )获取匹配元素集合中的第一个元素的样式属性的计算值
+.css( propertyNames )
+传递一组数组，返回一个对象结果
+</code></pre><p>设置：</p>
+<pre><code>.css(propertyName, value )设置CSS
+
+.css( propertyName, function )可以传入一个回调函数，返回取到对应的值进行处理
+
+.css( properties )
+可以传一个对象，同时设置多个样式
+</code></pre><p>注意事项：</p>
+<p>(1)<br>浏览器属性获取方式不同，<br>在获取某些值的时候都jQuery采用统一的处理<br>比如颜色采用RBG，尺寸采用px</p>
+<p>(2)<br>.css()方法支持驼峰写法与大小写混搭的写法，<br>内部做了容错的处理</p>
+<p>(3)<br>当一个数只被作为值（value）的时候，<br>jQuery会将其转换为一个字符串，<br>并添在字符串的结尾处添加px，<br>例如 .css(“width”,50})与.css(“width”,”50px”})一样</p>
+<p>##.css()与.addClass()设置样式的区别</p>
+<p>1.可维护性：</p>
+<p>.addClass()<br>的本质是通过定义个class类的样式规则，给元素添加一个或多个类。<br>css方法是通过JavaScript大量代码进行改变元素的样式<br>通过.addClass()我们可以批量的给相同的元素设置统一规则，<br>变动起来比较方便，可以统一修改删除。<br>如果通过.css()方法就需要指定每一个元素是一一的修改，<br>日后维护也要一一的修改，比较麻烦</p>
+<p>2.灵活性：</p>
+<p>通过.css()方式可以很容易动态的去改变一个样式的属性，<br>不需要在去繁琐的定义个class类的规则。<br>一般来说在不确定开始布局规则，通过动态生成的HTML代码结构中，<br>都是通过.css()方法处理的</p>
+<p>3.样式值：</p>
+<p>.addClass()本质只是针对class的类的增加删除，<br>不能获取到指定样式的属性的值，.css()可以获取到指定的样式值。</p>
+<p>4.样式的优先级：<br>css的样式是有优先级的，<br>当外部样式、内部样式和内联样式同一样式规则同时<br>应用于同一个元素的时候<br>优先级如下：</p>
+<pre><code>外部样式 &lt; 内部样式 &lt; 内联样式
+</code></pre><p>.addClass()方法是通过增加class名的方式，<br>那么这个样式是在外部文件或者内部样式中先定义好的，<br>等到需要的时候在附加到元素上</p>
+<p>通过.css()方法处理的是内联样式，<br>直接通过元素的style属性附加到元素上的</p>
+<pre><code>通过.css方法设置的样式属性优先级要高于.addClass方法
+</code></pre><p>5.总结：</p>
+<p>.addClass与.css方法各有利弊，一般是静态的结构，<br>都确定了布局的规则，可以用addClass的方法，增加统一的类规则</p>
+<p>如果是动态的HTML结构，在不确定规则，<br>或者经常变化的情况下，一般多考虑.css()方式</p>
+<p>##元素的数据存储</p>
+<p>jQuery提供的存储接口：</p>
+<pre><code>jQuery.data(element, key, value)       静态接口,存数据
+jQuery.data(element, key)            静态接口,取数据   
+.data(key, value)                    实例接口,存数据
+.data(key)                             实例接口,存数据
+</code></pre><p>2个方法在使用上存取都是通一个接口，传递元素，键值数据。<br>在jQuery的官方文档中，建议用.data()方法来代替。</p>
+<p>删除接口：</p>
+<pre><code>jQuery.removeData(element [, name])
+.removeData([name])
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/sollylee.github.io/tags/JQ/" rel="tag"><i class="fa fa-tag"></i> JQ</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/sollylee.github.io/2018/02/08/JavaScript进阶学习-四/" rel="next" title="JavaScript进阶学习(四)">
+                <i class="fa fa-chevron-left"></i> JavaScript进阶学习(四)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/sollylee.github.io/2018/04/22/Python学习-一/" rel="prev" title="Python学习(一)">
+                Python学习(一) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/sollylee.github.io/images/金木.jpg"
+                alt="Solly Lee" />
+            
+              <p class="site-author-name" itemprop="name">Solly Lee</p>
+              <p class="site-description motion-element" itemprop="description">Go big or go home</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/sollylee.github.io/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/sollylee.github.io/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/sollylee.github.io/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/sollylee.github.io/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://ife.baidu.com/" title="百度前端技术学院" target="_blank">百度前端技术学院</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.imooc.com/" title="慕课网" target="_blank">慕课网</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Solly Lee</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/sollylee.github.io/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/sollylee.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/sollylee.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/sollylee.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/sollylee.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/sollylee.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
