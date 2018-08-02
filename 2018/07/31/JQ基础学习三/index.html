@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="JQ 事件">
+<meta name="description" content="JQ事件">
 <meta name="keywords" content="JQ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JQ基础学习三">
+<meta property="og:title" content="JQ基础学习(三)">
 <meta property="og:url" content="https://sollylee.github.io/2018/07/31/JQ基础学习三/index.html">
 <meta property="og:site_name" content="LISILE&#39;s Notes">
-<meta property="og:description" content="JQ 事件">
+<meta property="og:description" content="JQ事件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-01T02:25:38.039Z">
+<meta property="og:updated_time" content="2018-08-02T07:16:17.625Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JQ基础学习三">
-<meta name="twitter:description" content="JQ 事件">
+<meta name="twitter:title" content="JQ基础学习(三)">
+<meta name="twitter:description" content="JQ事件">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>JQ基础学习三 | LISILE's Notes</title>
+  <title>JQ基础学习(三) | LISILE's Notes</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JQ基础学习三</h1>
+          <h1 class="post-title" itemprop="name headline">JQ基础学习(三)</h1>
         
 
         <div class="post-meta">
@@ -356,9 +356,8 @@
       
 
       
-        <p>JQ 事件<br><a id="more"></a></p>
-<p>#JQ鼠标事件</p>
-<p>##click()与dbclick()<br>监听用户的点击操作与监听用户的双击操作</p>
+        <p>JQ事件<br><a id="more"></a></p>
+<h1 id="JQ鼠标事件"><a href="#JQ鼠标事件" class="headerlink" title="JQ鼠标事件"></a>JQ鼠标事件</h1><h2 id="click-与dbclick"><a href="#click-与dbclick" class="headerlink" title="click()与dbclick()"></a>click()与dbclick()</h2><p>监听用户的点击操作与监听用户的双击操作</p>
 <pre><code>$ele.click() 
 绑定$ele元素，不带任何参数一般是用来指定触发一个事件
 
@@ -370,7 +369,7 @@ $ele.click([eventData ], handler(eventObject))
 这样的处理是为了解决不同作用域下数据传递的问题
 </code></pre><p>dblclick()的用法和click()的用法是类似的</p>
 <p>注意：<br>在同一元素上同时绑定 click 和 dblclick 事件是不可取的。<br>各个浏览器事件触发的顺序是不同的<br>一些浏览器在dblclick之前接受两个 click 事件<br>而一些浏览器只接受一个 click事件。<br>用户往往可通过不同的操作系统和浏览器配置双击灵敏度</p>
-<p>##mousedown()与mouseup()<br>监听用户鼠标按下的操作，与监听用户鼠标弹起的操作<br>mousedown()与mouseup()和click()的用法是类似的</p>
+<h2 id="mousedown-与mouseup"><a href="#mousedown-与mouseup" class="headerlink" title="mousedown()与mouseup()"></a>mousedown()与mouseup()</h2><p>监听用户鼠标按下的操作，与监听用户鼠标弹起的操作<br>mousedown()与mouseup()和click()的用法是类似的</p>
 <pre><code>$ele.mousedown()
 
 $ele.mousedown(handler(eventObject))
@@ -391,7 +390,7 @@ $ele.mousedown([eventData], handler(eventObject))
 </code></pre><p>mouseup事件：</p>
 <pre><code>mouseup强调是松手触发
 其他与mousedown一致
-</code></pre><p>##mousemove()<br>监听用户移动的的操作<br>mousemove()和click()的用法是类似的</p>
+</code></pre><h2 id="mousemove"><a href="#mousemove" class="headerlink" title="mousemove()"></a>mousemove()</h2><p>监听用户移动的的操作<br>mousemove()和click()的用法是类似的</p>
 <pre><code>$ele.mousemove()
 
 $ele.mousemove(handler(eventObject))
@@ -400,17 +399,17 @@ $ele.mousemove([eventData], handler(eventObject))
 </code></pre><p>mousemove事件触发需要以下几点：</p>
 <p>1.mousemove事件是当鼠标指针移动时触发的，即使是一个像素</p>
 <p>2.如果处理器做任何重大的处理，或者如果该事件存在多个处理函数，<br>这可能造成浏览器的严重的性能问题</p>
-<p>##mouseover()与mouseout()<br>用于监听用户的移入移出操作<br>mouseover()与mouseout()和click()的用法是类似的</p>
+<h2 id="mouseover-与mouseout"><a href="#mouseover-与mouseout" class="headerlink" title="mouseover()与mouseout()"></a>mouseover()与mouseout()</h2><p>用于监听用户的移入移出操作<br>mouseover()与mouseout()和click()的用法是类似的</p>
 <pre><code>$ele.mouseover()
 
 $ele.mouseover(handler(eventObject))
 
 $ele.mouseover([eventData], handler(eventObject))
-</code></pre><p>##mouseenter与mouseleave事件<br>监听用户移动到内部的操作<br>三种参数传递方式与mouseover和mouseout是一模一样的</p>
+</code></pre><h2 id="mouseenter与mouseleave事件"><a href="#mouseenter与mouseleave事件" class="headerlink" title="mouseenter与mouseleave事件"></a>mouseenter与mouseleave事件</h2><p>监听用户移动到内部的操作<br>三种参数传递方式与mouseover和mouseout是一模一样的</p>
 <p>mouseenter事件和mouseover的区别:</p>
 <p>1.mouseenter事件只会在绑定它的元素上被调用<br>  而不会在后代节点上被触发</p>
 <p>2.mouseover会产生事件冒泡</p>
-<p>##hover()<br>用来给元素做一个简单的切换效果</p>
+<h2 id="hover"><a href="#hover" class="headerlink" title="hover()"></a>hover()</h2><p>用来给元素做一个简单的切换效果</p>
 <pre><code>$(selector).hover(handlerIn, handlerOut)
 </code></pre><p>注:<br>handlerIn(eventObject):<br>当鼠标指针进入元素时触发执行的事件函数</p>
 <p>handlerOut(eventObject):<br>当鼠标指针离开元素时触发执行的事件函数</p>
@@ -423,23 +422,21 @@ $ele.mouseover([eventData], handler(eventObject))
         $(this).css(&quot;background&quot;, &apos;#bbffaa&apos;);
     }
 );
-</code></pre><p>##focusin()<br>捕获用户点击聚焦的动作<br>focusin()和click()的用法是类似的</p>
+</code></pre><h2 id="focusin"><a href="#focusin" class="headerlink" title="focusin()"></a>focusin()</h2><p>捕获用户点击聚焦的动作<br>focusin()和click()的用法是类似的</p>
 <pre><code>$ele.focusin() 
 
 $ele.focusin( handler )
 
 $ele.focusin( [eventData ], handler )
-</code></pre><p>##focusout()<br>捕获用户点击失焦的动作<br>focusout()和click()的用法是类似的</p>
+</code></pre><h2 id="focusout"><a href="#focusout" class="headerlink" title="focusout()"></a>focusout()</h2><p>捕获用户点击失焦的动作<br>focusout()和click()的用法是类似的</p>
 <pre><code>$ele.focusout() 
 
 $ele.focusout(handler)
 
 $ele.focusout( [eventData ], handler )
-</code></pre><p>#JQ表单事件</p>
-<p>##blur()与focus()<br>用于处理表单焦点<br>blur()与focus()和focusin()与focusout()用法类似</p>
+</code></pre><h1 id="JQ表单事件"><a href="#JQ表单事件" class="headerlink" title="JQ表单事件"></a>JQ表单事件</h1><h2 id="blur-与focus"><a href="#blur-与focus" class="headerlink" title="blur()与focus()"></a>blur()与focus()</h2><p>用于处理表单焦点<br>blur()与focus()和focusin()与focusout()用法类似</p>
 <p>区别:<br>focus()在元素本身产生，focusin()在元素包含的元素中产生<br>blur与focusout也亦是如此</p>
-<p>##change()</p>
-<p><input>元素,<textarea>和</textarea><select>元素的值都是可以发生改变的<br>可以通过change事件去监听这些改变的动作</select></p>
+<h2 id="change"><a href="#change" class="headerlink" title="change()"></a>change()</h2><p><input>元素,<textarea>和</textarea><select>元素的值都是可以发生改变的<br>可以通过change事件去监听这些改变的动作</select></p>
 <p>change()用法与click()用法类似</p>
 <p>input元素:</p>
 <pre><code>监听value值的变化，当有改变时，失去焦点后触发change事件。
@@ -448,7 +445,7 @@ $ele.focusout( [eventData ], handler )
 <pre><code>对于下拉选择框，当用户用鼠标作出选择时，该事件立即触发
 </code></pre><p>textarea元素:</p>
 <pre><code>多行文本输入框，当有改变时，失去焦点后触发change事件
-</code></pre><p>##select()<br>当 textarea 或文本类型的 input 元素中的文本被选择时，<br>会发生 select 事件。<br>select()用法与click()用法类似</p>
+</code></pre><h2 id="select"><a href="#select" class="headerlink" title="select()"></a>select()</h2><p>当 textarea 或文本类型的 input 元素中的文本被选择时，<br>会发生 select 事件。<br>select()用法与click()用法类似</p>
 <pre><code>$ele.select()
 
 $ele.select(handler(eventObject))
@@ -457,7 +454,7 @@ $ele.select([eventData], handler(eventObject))
 </code></pre><p>注意:</p>
 <p>这个函数会调用执行绑定到select事件的所有函数,包括浏览器的默认行为<br>可以通过在某个绑定的函数中返回false来防止触发浏览器的默认行为</p>
 <p>2.select事件只能用于<input>元素与<textarea>元素</textarea></p>
-<p>##submit()<br>通过submit事件，监听提交表单的这个动作<br>submit()用法与click()用法类似</p>
+<h2 id="submit"><a href="#submit" class="headerlink" title="submit()"></a>submit()</h2><p>通过submit事件，监听提交表单的这个动作<br>submit()用法与click()用法类似</p>
 <pre><code>$ele.submit()
 
 $ele.submit(handler(eventObject))
@@ -469,9 +466,7 @@ $ele.submit([eventData], handler(eventObject))
 &lt;button type=&quot;submit&quot;&gt;
 当某些表单元素获取焦点时，敲击Enter(回车键)
 </code></pre><p>特别注意：<br>form元素是有默认提交表单的行为，<br>如果通过submit处理的话，需要禁止浏览器的这个默认行为<br>传统的方式是调用事件对象  e.preventDefault() 来处理<br>jQuery中可以直接在函数中最后结尾return false即可</p>
-<p>#键盘事件</p>
-<p>##keydown()与keyup()</p>
-<p>keydown事件:<br>当用户在一个元素上第一次按下键盘上字母键的时候，就会触发<br>用法与基本事件参数处理保持一致(与click()用法类似)</p>
+<h1 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h1><h2 id="keydown-与keyup"><a href="#keydown-与keyup" class="headerlink" title="keydown()与keyup()"></a>keydown()与keyup()</h2><p>keydown事件:<br>当用户在一个元素上第一次按下键盘上字母键的时候，就会触发<br>用法与基本事件参数处理保持一致(与click()用法类似)</p>
 <pre><code>$elem.keydown( handler(eventObject) )
 
 $elem.keydown( [eventData ], handler(eventObject) )
@@ -492,13 +487,12 @@ keydown事件触发在文字还没敲进文本框，
 得到的是触发键盘事件前的文本
 而keyup事件触发时整个键盘事件的操作已经完成
 获得的是触发键盘事件后的文本
-</code></pre><p>##keypress()<br>捕获键盘输入<br>用法与keydown()非常相似</p>
+</code></pre><h2 id="keypress"><a href="#keypress" class="headerlink" title="keypress()"></a>keypress()</h2><p>捕获键盘输入<br>用法与keydown()非常相似</p>
 <p>keypress事件与keydown和keyup的主要区别:</p>
 <p>1.只能捕获单个字符，不能捕获组合键<br>2.无法响应系统功能键（如delete，backspace）<br>3.不区分小键盘和主键盘的数字字符</p>
 <p>KeyPress主要用来接收字母、数字等ANSI字符，<br>而KeyDown和KeyUP事件过程可以处理任何不被KeyPress识别的击键</p>
 <p>诸如：功能键（F1-F12）、编辑键、定位键<br>    以及任何这些键和键盘换档键的组合等</p>
-<p>#事件的绑定与解绑</p>
-<p>##on()<br>用于给元素绑定事件</p>
+<h1 id="事件的绑定与解绑"><a href="#事件的绑定与解绑" class="headerlink" title="事件的绑定与解绑"></a>事件的绑定与解绑</h1><h2 id="on"><a href="#on" class="headerlink" title="on()"></a>on()</h2><p>用于给元素绑定事件</p>
 <p>基本用法：</p>
 <pre><code>.on( events ,[ selector ] ,[ data ] )
 </code></pre><p>多个事件绑定同一个函数</p>
@@ -515,8 +509,7 @@ keydown事件触发在文字还没敲进文本框，
 $( &quot;button&quot; ).on( &quot;click&quot;, {
   name: &quot;World&quot;
 }, greet );
-</code></pre><p>##on()的高级用法</p>
-<p>委托机制:</p>
+</code></pre><h2 id="on-的高级用法"><a href="#on-的高级用法" class="headerlink" title="on()的高级用法"></a>on()的高级用法</h2><p>委托机制:</p>
 <pre><code>.on( events ,[ selector ] ,[ data ], 
     handler(eventObject) )
 </code></pre><p>E.g:</p>
@@ -534,7 +527,7 @@ $( &quot;button&quot; ).on( &quot;click&quot;, {
 事件将往上冒泡，一直会冒泡在div元素上。如果提供了第二参数
 那么事件在往上冒泡的过程中遇到了选择器匹配的元素，
 将会触发事件回调函数
-</code></pre><p>##off()方法<br>通过.on()绑定的事件处理程序,可以通过off() 方法移除该绑定</p>
+</code></pre><h2 id="off-方法"><a href="#off-方法" class="headerlink" title="off()方法"></a>off()方法</h2><p>通过.on()绑定的事件处理程序,可以通过off() 方法移除该绑定</p>
 <p>根据on绑定事件的一些特性,off方法也可以通过相应的传递组合的事件名,<br>名字空间,选择器或处理函数来移除绑定在元素上指定的事件处理函数<br>当有多个过滤参数时,只有与这些参数完全匹配的事件处理函数才会被移除</p>
 <p>E.g.:</p>
 <p>绑定2个事件:</p>
@@ -544,15 +537,12 @@ $( &quot;button&quot; ).on( &quot;click&quot;, {
 </code></pre><p>删除所有事件:</p>
 <pre><code>$(&quot;elem&quot;).off(&quot;mousedown mouseup&quot;)
 $(&quot;elem&quot;).off()
-</code></pre><p>#事件对象的使用</p>
-<p>##事件对象的作用</p>
-<p>jQuery事件回调方法中获取到的事件对象<br>是经过兼容后处理过的一个标准的跨浏览器对象</p>
+</code></pre><h1 id="事件对象的使用"><a href="#事件对象的使用" class="headerlink" title="事件对象的使用"></a>事件对象的使用</h1><h2 id="事件对象的作用"><a href="#事件对象的作用" class="headerlink" title="事件对象的作用"></a>事件对象的作用</h2><p>jQuery事件回调方法中获取到的事件对象<br>是经过兼容后处理过的一个标准的跨浏览器对象</p>
 <p>事件对象是用来记录一些事件发生时的相关信息的对象。<br>事件对象只有事件发生时才会产生，并且只能是事件处理函数内部访问<br>在所有事件处理函数运行结束后，事件对象就被销毁</p>
 <p>event.target</p>
 <p>target 属性可以是注册事件时的元素，或者它的子元素<br>通常用于比较event.target和this<br>来确定事件是不是由于冒泡而触发的<br>也常用于事件冒泡时处理事件委托</p>
 <p>简单来说：<br>event.target代表当前触发事件的元素，<br>可以通过当前元素对象的一系列属性来判断是不是我们想要的元素</p>
-<p>##对象的属性和方法</p>
-<pre><code>event.type                     获取事件的类型
+<h2 id="对象的属性和方法"><a href="#对象的属性和方法" class="headerlink" title="对象的属性和方法"></a>对象的属性和方法</h2><pre><code>event.type                     获取事件的类型
 
 event.pageX和event.pageY       获取鼠标当前相对于页面的坐标
 
@@ -566,9 +556,7 @@ event.currentTarget     在事件冒泡过程中的当前DOM元素
 </code></pre><p>this和event.target的区别：</p>
 <p>js中事件是会冒泡的，所以this是可以变化的<br>但event.target不会变化，它永远是直接接受事件的目标DOM元素;</p>
 <p>.this和event.target都是dom对象<br>如果要使用jquey中的方法可以将他们转换为jquery对象</p>
-<p>#自定义事件</p>
-<p>##trigger事件</p>
-<p>原生事件:</p>
+<h1 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h1><h2 id="trigger事件"><a href="#trigger事件" class="headerlink" title="trigger事件"></a>trigger事件</h2><p>原生事件:</p>
 <p>由浏览器提供的叫原生事件<br>这类事件是需要有交互行为才能被触发</p>
 <p>自定义事件trigger:</p>
 <p>根据绑定到匹配元素的给定的事件类型执行所有的处理程序和行为</p>
@@ -582,8 +570,7 @@ $(&apos;#elem&apos;).trigger(&apos;Aaron&apos;,[&apos;参数1&apos;,&apos;参数
 <p>1.自定义事件对象，是jQuery模拟原生实现的<br>2.自定义事件可以传递参数</p>
 <p>trigger事件还有一个特性：会在DOM树上冒泡<br>所以如果要阻止冒泡就需要在事件处理程序中返回false<br>或调用事件对象中的.stopPropagation() 方法可以使事件停止冒泡</p>
 <p>trigger事件是具有触发原生与自定义能力的，<br>但是存在一个不可避免的问题： 事件对象event无法完美的实现</p>
-<p>##triggerHandler事件</p>
-<p>triggerHandler与trigger的用法是一样的，重点看不同之处：</p>
+<h2 id="triggerHandler事件"><a href="#triggerHandler事件" class="headerlink" title="triggerHandler事件"></a>triggerHandler事件</h2><p>triggerHandler与trigger的用法是一样的，重点看不同之处：</p>
 <pre><code>1.triggerHandler不会触发浏览器的默认行为，
 .triggerHandler( &quot;submit&quot; )将不会调用表单上的.submit()
 
@@ -627,8 +614,8 @@ $(&apos;#elem&apos;).trigger(&apos;Aaron&apos;,[&apos;参数1&apos;,&apos;参数
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/sollylee.github.io/2018/07/31/JQ基础学习二/" rel="next" title="JQ基础学习二">
-                <i class="fa fa-chevron-left"></i> JQ基础学习二
+              <a href="/sollylee.github.io/2018/07/31/JQ基础学习二/" rel="next" title="JQ基础学习(二)">
+                <i class="fa fa-chevron-left"></i> JQ基础学习(二)
               </a>
             
           </div>
@@ -637,8 +624,8 @@ $(&apos;#elem&apos;).trigger(&apos;Aaron&apos;,[&apos;参数1&apos;,&apos;参数
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/sollylee.github.io/2018/08/01/JQ基础学习四/" rel="prev" title="JQ基础学习四">
-                JQ基础学习四 <i class="fa fa-chevron-right"></i>
+              <a href="/sollylee.github.io/2018/08/01/JQ基础学习四/" rel="prev" title="JQ基础学习(四)">
+                JQ基础学习(四) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -691,8 +678,17 @@ $(&apos;#elem&apos;).trigger(&apos;Aaron&apos;,[&apos;参数1&apos;,&apos;参数
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -789,6 +785,22 @@ $(&apos;#elem&apos;).trigger(&apos;Aaron&apos;,[&apos;参数1&apos;,&apos;参数
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JQ鼠标事件"><span class="nav-number">1.</span> <span class="nav-text">JQ鼠标事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#click-与dbclick"><span class="nav-number">1.1.</span> <span class="nav-text">click()与dbclick()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mousedown-与mouseup"><span class="nav-number">1.2.</span> <span class="nav-text">mousedown()与mouseup()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mousemove"><span class="nav-number">1.3.</span> <span class="nav-text">mousemove()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mouseover-与mouseout"><span class="nav-number">1.4.</span> <span class="nav-text">mouseover()与mouseout()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mouseenter与mouseleave事件"><span class="nav-number">1.5.</span> <span class="nav-text">mouseenter与mouseleave事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hover"><span class="nav-number">1.6.</span> <span class="nav-text">hover()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#focusin"><span class="nav-number">1.7.</span> <span class="nav-text">focusin()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#focusout"><span class="nav-number">1.8.</span> <span class="nav-text">focusout()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JQ表单事件"><span class="nav-number">2.</span> <span class="nav-text">JQ表单事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#blur-与focus"><span class="nav-number">2.1.</span> <span class="nav-text">blur()与focus()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#change"><span class="nav-number">2.2.</span> <span class="nav-text">change()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#select"><span class="nav-number">2.3.</span> <span class="nav-text">select()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#submit"><span class="nav-number">2.4.</span> <span class="nav-text">submit()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#键盘事件"><span class="nav-number">3.</span> <span class="nav-text">键盘事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#keydown-与keyup"><span class="nav-number">3.1.</span> <span class="nav-text">keydown()与keyup()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#keypress"><span class="nav-number">3.2.</span> <span class="nav-text">keypress()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件的绑定与解绑"><span class="nav-number">4.</span> <span class="nav-text">事件的绑定与解绑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#on"><span class="nav-number">4.1.</span> <span class="nav-text">on()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#on-的高级用法"><span class="nav-number">4.2.</span> <span class="nav-text">on()的高级用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#off-方法"><span class="nav-number">4.3.</span> <span class="nav-text">off()方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件对象的使用"><span class="nav-number">5.</span> <span class="nav-text">事件对象的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件对象的作用"><span class="nav-number">5.1.</span> <span class="nav-text">事件对象的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象的属性和方法"><span class="nav-number">5.2.</span> <span class="nav-text">对象的属性和方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义事件"><span class="nav-number">6.</span> <span class="nav-text">自定义事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#trigger事件"><span class="nav-number">6.1.</span> <span class="nav-text">trigger事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#triggerHandler事件"><span class="nav-number">6.2.</span> <span class="nav-text">triggerHandler事件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

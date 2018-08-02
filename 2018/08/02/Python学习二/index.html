@@ -84,14 +84,14 @@
 <meta name="description" content="Python常用函数">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python学习二">
+<meta property="og:title" content="Python学习(二)">
 <meta property="og:url" content="https://sollylee.github.io/2018/08/02/Python学习二/index.html">
 <meta property="og:site_name" content="LISILE&#39;s Notes">
 <meta property="og:description" content="Python常用函数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-02T06:37:00.146Z">
+<meta property="og:updated_time" content="2018-08-02T07:19:02.455Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python学习二">
+<meta name="twitter:title" content="Python学习(二)">
 <meta name="twitter:description" content="Python常用函数">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>Python学习二 | LISILE's Notes</title>
+  <title>Python学习(二) | LISILE's Notes</title>
   
 
 
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python学习二</h1>
+          <h1 class="post-title" itemprop="name headline">Python学习(二)</h1>
         
 
         <div class="post-meta">
@@ -357,8 +357,7 @@
 
       
         <p>Python常用函数<br><a id="more"></a></p>
-<p>#Python数据类型转换</p>
-<pre><code>int(x [,base])        将x转换为一个整数
+<h1 id="Python数据类型转换"><a href="#Python数据类型转换" class="headerlink" title="Python数据类型转换"></a>Python数据类型转换</h1><pre><code>int(x [,base])        将x转换为一个整数
 
 float(x)             将x转换到一个浮点数
 
@@ -394,8 +393,7 @@ ord(x)             将一个字符转换为它的整数值
 hex(x)             将一个整数转换为一个十六进制字符串
 
 oct(x)             将一个整数转换为一个八进制字符串
-</code></pre><p>#数学函数</p>
-<pre><code>abs(x)             返回数字的绝对值，如abs(-10)返回10
+</code></pre><h1 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h1><pre><code>abs(x)             返回数字的绝对值，如abs(-10)返回10
 
 ceil(x)         返回数字的上入整数，
                 如math.ceil(4.1)返回5
@@ -433,7 +431,7 @@ round(x [,n])         返回浮点数x的四舍五入值,如给出n值
                     则代表舍入到小数点后的位数。
 
 sqrt(x)             返回数字x的平方根。
-</code></pre><p>#随机数函数<br>使用随机函数时, 要导入random模块<br>然后通过random静态对象调用该方法</p>
+</code></pre><h1 id="随机数函数"><a href="#随机数函数" class="headerlink" title="随机数函数"></a>随机数函数</h1><p>使用随机函数时, 要导入random模块<br>然后通过random静态对象调用该方法</p>
 <pre><code>choice(seq)     从序列的元素中随机挑选一个元素
                 比如random.choice(range(10))，
                 从0到9中随机挑选一个整数。
@@ -449,47 +447,47 @@ seed([x])         改变随机数生成器的种子seed。
 shuffle(lst)     将序列的所有元素随机排序
 
 uniform(x, y)    随机生成下一个实数，它在[x,y]范围内
-</code></pre><p>#Python 的字符串内建函数<br>Python 的字符串常用内建函数如下：</p>
-<p>##capitalize()<br>将字符串的第一个字符转换为大写</p>
-<p>##center(width, fillchar)<br>返回一个指定的宽度 width 居中的字符串，<br>fillchar 为填充的字符，默认为空格。</p>
-<p>##count(str, beg= 0,end=len(string))<br>返回 str 在 string 里面出现的次数，<br>如果 beg 或者 end 指定则返回指定范围内 str 出现的次数</p>
-<p>##bytes.decode(encoding=”utf-8”, errors=”strict”)<br>Python3 中没有 decode 方法，<br>但我们可以使用 bytes 对象的 decode() 方法<br>来解码给定的 bytes 对象，<br>这个 bytes 对象可以由 str.encode() 来编码返回。</p>
-<p>##encode(encoding=’UTF-8’,errors=’strict’)<br>以 encoding 指定的编码格式编码字符串，<br>如果出错默认报一个ValueError 的异常，<br>除非 errors 指定的是’ignore’或者’replace’</p>
-<p>##endswith(suffix, beg=0, end=len(string))<br>检查字符串是否以 obj 结束，<br>如果beg 或者 end 指定则检查指定的范围内是否以 obj 结束<br>如果是，返回 True,否则返回 False.</p>
-<p>##expandtabs(tabsize=8)<br>把字符串 string 中的 tab 符号转为空格，<br>tab 符号默认的空格数是 8 </p>
-<p>##find(str, beg=0 end=len(string))<br>检测 str 是否包含在字符串中，<br>如果指定范围 beg 和 end ，则检查是否包含在指定范围内<br>如果包含返回开始的索引值，否则返回-1</p>
-<p>##index(str, beg=0, end=len(string))<br>跟find()方法一样，只不过如果str不在字符串中会报一个异常.</p>
-<p>##isalnum()<br>如果字符串至少有一个字符并且所有字符都是字母或数字<br>则返 回 True,否则返回 False</p>
-<p>##isalpha()<br>如果字符串至少有一个字符并且所有字符都是字母则返回 True,<br>否则返回 False</p>
-<p>##isdigit()<br>如果字符串只包含数字则返回 True 否则返回 False..</p>
-<p>##islower()<br>如果字符串中包含至少一个区分大小写的字符，<br>并且所有这些(区分大小写的)字符都是小写，<br>则返回 True，否则返回 False</p>
-<p>##isnumeric()<br>如果字符串中只包含数字字符，则返回 True，否则返回 False</p>
-<p>##isspace()<br>如果字符串中只包含空白，则返回 True，否则返回 False.</p>
-<p>##istitle()<br>如果字符串是标题化的(见 title())则返回True,否则返回False</p>
-<p>##isupper()<br>如果字符串中包含至少一个区分大小写的字符，<br>并且所有这些(区分大小写的)字符都是大写，<br>则返回 True，否则返回 False</p>
-<p>##join(seq)<br>以指定字符串作为分隔符，<br>将 seq 中所有的元素(的字符串表示)合并为一个新的字符串</p>
-<p>##len(string)<br>返回字符串长度</p>
-<p>##ljust(width[, fillchar])<br>返回一个原字符串左对齐,<br>并使用 fillchar 填充至长度 width 的新字符串，<br>fillchar 默认为空格。</p>
-<p>##lower()<br>转换字符串中所有大写字符为小写.</p>
-<p>##lstrip()<br>截掉字符串左边的空格或指定字符。</p>
-<p>##maketrans()<br>创建字符映射的转换表，对于接受两个参数的最简单的调用方式<br>第一个参数是字符串，表示需要转换的字符，<br>第二个参数也是字符串表示转换的目标。</p>
-<p>##max(str)<br>返回字符串 str 中最大的字母。</p>
-<p>##min(str)<br>回字符串 str 中最小的字母。</p>
-<p>##replace(old, new [, max])<br>把 将字符串中的 str1 替换成 str2,如果 max 指定，<br>则替换不超过 max 次。</p>
-<p>##rfind(str, beg=0,end=len(string))<br>类似于 find()函数，不过是从右边开始查找.</p>
-<p>##rindex( str, beg=0, end=len(string))<br>类似于 index()，不过是从右边开始.</p>
-<p>##rjust(width,[, fillchar])<br>返回一个原字符串右对齐,并使用fillchar(默认空格）<br>填充至长度 width 的新字符串</p>
-<p>##rstrip()<br>删除字符串字符串末尾的空格.</p>
-<p>##split(str=””, num=string.count(str))<br>num=string.count(str)) 以 str 为分隔符截取字符串，<br>如果 num 有指定值，则仅截取 num 个子字符串</p>
-<p>##splitlines([keepends])<br>按照行(‘\r’, ‘\r\n’, \n’)分隔，<br>返回一个包含各行作为元素的列表<br>如果参数 keepends 为 False，不包含换行符，<br>如果为 True，则保留换行符。</p>
-<p>##startswith(str, beg=0,end=len(string))<br>检查字符串是否是以 obj 开头，是则返回 True，<br>否则返回 False<br>如果beg 和 end 指定值，则在指定范围内检查</p>
-<p>##strip([chars])<br>在字符串上执行 lstrip()和 rstrip()</p>
-<p>##swapcase()<br>将字符串中大写转换为小写，小写转换为大写</p>
-<p>##title()<br>返回”标题化”的字符串,就是说所有单词都是以大写开始，<br>其余字母均为小写(见 istitle())</p>
-<p>##translate(table, deletechars=””)<br>根据 str 给出的表(包含 256 个字符)转换 string 的字符,<br>要过滤掉的字符放到 deletechars 参数中</p>
-<p>##upper()<br>转换字符串中的小写字母为大写</p>
-<p>##zfill (width)<br>返回长度为 width 的字符串，原字符串右对齐，前面填充0</p>
-<p>##isdecimal()<br>检查字符串是否只包含十进制字符，<br>如果是返回 true，否则返回 false</p>
+</code></pre><h1 id="Python-的字符串内建函数"><a href="#Python-的字符串内建函数" class="headerlink" title="Python 的字符串内建函数"></a>Python 的字符串内建函数</h1><p>Python 的字符串常用内建函数如下：</p>
+<h2 id="capitalize"><a href="#capitalize" class="headerlink" title="capitalize()"></a>capitalize()</h2><p>将字符串的第一个字符转换为大写</p>
+<h2 id="center-width-fillchar"><a href="#center-width-fillchar" class="headerlink" title="center(width, fillchar)"></a>center(width, fillchar)</h2><p>返回一个指定的宽度 width 居中的字符串，<br>fillchar 为填充的字符，默认为空格。</p>
+<h2 id="count-str-beg-0-end-len-string"><a href="#count-str-beg-0-end-len-string" class="headerlink" title="count(str, beg= 0,end=len(string))"></a>count(str, beg= 0,end=len(string))</h2><p>返回 str 在 string 里面出现的次数，<br>如果 beg 或者 end 指定则返回指定范围内 str 出现的次数</p>
+<h2 id="bytes-decode-encoding-”utf-8”-errors-”strict”"><a href="#bytes-decode-encoding-”utf-8”-errors-”strict”" class="headerlink" title="bytes.decode(encoding=”utf-8”, errors=”strict”)"></a>bytes.decode(encoding=”utf-8”, errors=”strict”)</h2><p>Python3 中没有 decode 方法，<br>但我们可以使用 bytes 对象的 decode() 方法<br>来解码给定的 bytes 对象，<br>这个 bytes 对象可以由 str.encode() 来编码返回。</p>
+<h2 id="encode-encoding-’UTF-8’-errors-’strict’"><a href="#encode-encoding-’UTF-8’-errors-’strict’" class="headerlink" title="encode(encoding=’UTF-8’,errors=’strict’)"></a>encode(encoding=’UTF-8’,errors=’strict’)</h2><p>以 encoding 指定的编码格式编码字符串，<br>如果出错默认报一个ValueError 的异常，<br>除非 errors 指定的是’ignore’或者’replace’</p>
+<h2 id="endswith-suffix-beg-0-end-len-string"><a href="#endswith-suffix-beg-0-end-len-string" class="headerlink" title="endswith(suffix, beg=0, end=len(string))"></a>endswith(suffix, beg=0, end=len(string))</h2><p>检查字符串是否以 obj 结束，<br>如果beg 或者 end 指定则检查指定的范围内是否以 obj 结束<br>如果是，返回 True,否则返回 False.</p>
+<h2 id="expandtabs-tabsize-8"><a href="#expandtabs-tabsize-8" class="headerlink" title="expandtabs(tabsize=8)"></a>expandtabs(tabsize=8)</h2><p>把字符串 string 中的 tab 符号转为空格，<br>tab 符号默认的空格数是 8 </p>
+<h2 id="find-str-beg-0-end-len-string"><a href="#find-str-beg-0-end-len-string" class="headerlink" title="find(str, beg=0 end=len(string))"></a>find(str, beg=0 end=len(string))</h2><p>检测 str 是否包含在字符串中，<br>如果指定范围 beg 和 end ，则检查是否包含在指定范围内<br>如果包含返回开始的索引值，否则返回-1</p>
+<h2 id="index-str-beg-0-end-len-string"><a href="#index-str-beg-0-end-len-string" class="headerlink" title="index(str, beg=0, end=len(string))"></a>index(str, beg=0, end=len(string))</h2><p>跟find()方法一样，只不过如果str不在字符串中会报一个异常.</p>
+<h2 id="isalnum"><a href="#isalnum" class="headerlink" title="isalnum()"></a>isalnum()</h2><p>如果字符串至少有一个字符并且所有字符都是字母或数字<br>则返 回 True,否则返回 False</p>
+<h2 id="isalpha"><a href="#isalpha" class="headerlink" title="isalpha()"></a>isalpha()</h2><p>如果字符串至少有一个字符并且所有字符都是字母则返回 True,<br>否则返回 False</p>
+<h2 id="isdigit"><a href="#isdigit" class="headerlink" title="isdigit()"></a>isdigit()</h2><p>如果字符串只包含数字则返回 True 否则返回 False..</p>
+<h2 id="islower"><a href="#islower" class="headerlink" title="islower()"></a>islower()</h2><p>如果字符串中包含至少一个区分大小写的字符，<br>并且所有这些(区分大小写的)字符都是小写，<br>则返回 True，否则返回 False</p>
+<h2 id="isnumeric"><a href="#isnumeric" class="headerlink" title="isnumeric()"></a>isnumeric()</h2><p>如果字符串中只包含数字字符，则返回 True，否则返回 False</p>
+<h2 id="isspace"><a href="#isspace" class="headerlink" title="isspace()"></a>isspace()</h2><p>如果字符串中只包含空白，则返回 True，否则返回 False.</p>
+<h2 id="istitle"><a href="#istitle" class="headerlink" title="istitle()"></a>istitle()</h2><p>如果字符串是标题化的(见 title())则返回True,否则返回False</p>
+<h2 id="isupper"><a href="#isupper" class="headerlink" title="isupper()"></a>isupper()</h2><p>如果字符串中包含至少一个区分大小写的字符，<br>并且所有这些(区分大小写的)字符都是大写，<br>则返回 True，否则返回 False</p>
+<h2 id="join-seq"><a href="#join-seq" class="headerlink" title="join(seq)"></a>join(seq)</h2><p>以指定字符串作为分隔符，<br>将 seq 中所有的元素(的字符串表示)合并为一个新的字符串</p>
+<h2 id="len-string"><a href="#len-string" class="headerlink" title="len(string)"></a>len(string)</h2><p>返回字符串长度</p>
+<h2 id="ljust-width-fillchar"><a href="#ljust-width-fillchar" class="headerlink" title="ljust(width[, fillchar])"></a>ljust(width[, fillchar])</h2><p>返回一个原字符串左对齐,<br>并使用 fillchar 填充至长度 width 的新字符串，<br>fillchar 默认为空格。</p>
+<h2 id="lower"><a href="#lower" class="headerlink" title="lower()"></a>lower()</h2><p>转换字符串中所有大写字符为小写.</p>
+<h2 id="lstrip"><a href="#lstrip" class="headerlink" title="lstrip()"></a>lstrip()</h2><p>截掉字符串左边的空格或指定字符。</p>
+<h2 id="maketrans"><a href="#maketrans" class="headerlink" title="maketrans()"></a>maketrans()</h2><p>创建字符映射的转换表，对于接受两个参数的最简单的调用方式<br>第一个参数是字符串，表示需要转换的字符，<br>第二个参数也是字符串表示转换的目标。</p>
+<h2 id="max-str"><a href="#max-str" class="headerlink" title="max(str)"></a>max(str)</h2><p>返回字符串 str 中最大的字母。</p>
+<h2 id="min-str"><a href="#min-str" class="headerlink" title="min(str)"></a>min(str)</h2><p>回字符串 str 中最小的字母。</p>
+<h2 id="replace-old-new-max"><a href="#replace-old-new-max" class="headerlink" title="replace(old, new [, max])"></a>replace(old, new [, max])</h2><p>把 将字符串中的 str1 替换成 str2,如果 max 指定，<br>则替换不超过 max 次。</p>
+<h2 id="rfind-str-beg-0-end-len-string"><a href="#rfind-str-beg-0-end-len-string" class="headerlink" title="rfind(str, beg=0,end=len(string))"></a>rfind(str, beg=0,end=len(string))</h2><p>类似于 find()函数，不过是从右边开始查找.</p>
+<h2 id="rindex-str-beg-0-end-len-string"><a href="#rindex-str-beg-0-end-len-string" class="headerlink" title="rindex( str, beg=0, end=len(string))"></a>rindex( str, beg=0, end=len(string))</h2><p>类似于 index()，不过是从右边开始.</p>
+<h2 id="rjust-width-fillchar"><a href="#rjust-width-fillchar" class="headerlink" title="rjust(width,[, fillchar])"></a>rjust(width,[, fillchar])</h2><p>返回一个原字符串右对齐,并使用fillchar(默认空格）<br>填充至长度 width 的新字符串</p>
+<h2 id="rstrip"><a href="#rstrip" class="headerlink" title="rstrip()"></a>rstrip()</h2><p>删除字符串字符串末尾的空格.</p>
+<h2 id="split-str-””-num-string-count-str"><a href="#split-str-””-num-string-count-str" class="headerlink" title="split(str=””, num=string.count(str))"></a>split(str=””, num=string.count(str))</h2><p>num=string.count(str)) 以 str 为分隔符截取字符串，<br>如果 num 有指定值，则仅截取 num 个子字符串</p>
+<h2 id="splitlines-keepends"><a href="#splitlines-keepends" class="headerlink" title="splitlines([keepends])"></a>splitlines([keepends])</h2><p>按照行(‘\r’, ‘\r\n’, \n’)分隔，<br>返回一个包含各行作为元素的列表<br>如果参数 keepends 为 False，不包含换行符，<br>如果为 True，则保留换行符。</p>
+<h2 id="startswith-str-beg-0-end-len-string"><a href="#startswith-str-beg-0-end-len-string" class="headerlink" title="startswith(str, beg=0,end=len(string))"></a>startswith(str, beg=0,end=len(string))</h2><p>检查字符串是否是以 obj 开头，是则返回 True，<br>否则返回 False<br>如果beg 和 end 指定值，则在指定范围内检查</p>
+<h2 id="strip-chars"><a href="#strip-chars" class="headerlink" title="strip([chars])"></a>strip([chars])</h2><p>在字符串上执行 lstrip()和 rstrip()</p>
+<h2 id="swapcase"><a href="#swapcase" class="headerlink" title="swapcase()"></a>swapcase()</h2><p>将字符串中大写转换为小写，小写转换为大写</p>
+<h2 id="title"><a href="#title" class="headerlink" title="title()"></a>title()</h2><p>返回”标题化”的字符串,就是说所有单词都是以大写开始，<br>其余字母均为小写(见 istitle())</p>
+<h2 id="translate-table-deletechars-””"><a href="#translate-table-deletechars-””" class="headerlink" title="translate(table, deletechars=””)"></a>translate(table, deletechars=””)</h2><p>根据 str 给出的表(包含 256 个字符)转换 string 的字符,<br>要过滤掉的字符放到 deletechars 参数中</p>
+<h2 id="upper"><a href="#upper" class="headerlink" title="upper()"></a>upper()</h2><p>转换字符串中的小写字母为大写</p>
+<h2 id="zfill-width"><a href="#zfill-width" class="headerlink" title="zfill (width)"></a>zfill (width)</h2><p>返回长度为 width 的字符串，原字符串右对齐，前面填充0</p>
+<h2 id="isdecimal"><a href="#isdecimal" class="headerlink" title="isdecimal()"></a>isdecimal()</h2><p>检查字符串是否只包含十进制字符，<br>如果是返回 true，否则返回 false</p>
 
       
     </div>
@@ -520,8 +518,8 @@ uniform(x, y)    随机生成下一个实数，它在[x,y]范围内
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/sollylee.github.io/2018/08/01/JQ基础学习四/" rel="next" title="JQ基础学习四">
-                <i class="fa fa-chevron-left"></i> JQ基础学习四
+              <a href="/sollylee.github.io/2018/08/01/JQ基础学习四/" rel="next" title="JQ基础学习(四)">
+                <i class="fa fa-chevron-left"></i> JQ基础学习(四)
               </a>
             
           </div>
@@ -580,8 +578,17 @@ uniform(x, y)    随机生成下一个实数，它在[x,y]范围内
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -678,6 +685,22 @@ uniform(x, y)    随机生成下一个实数，它在[x,y]范围内
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python数据类型转换"><span class="nav-number">1.</span> <span class="nav-text">Python数据类型转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数学函数"><span class="nav-number">2.</span> <span class="nav-text">数学函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#随机数函数"><span class="nav-number">3.</span> <span class="nav-text">随机数函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-的字符串内建函数"><span class="nav-number">4.</span> <span class="nav-text">Python 的字符串内建函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#capitalize"><span class="nav-number">4.1.</span> <span class="nav-text">capitalize()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#center-width-fillchar"><span class="nav-number">4.2.</span> <span class="nav-text">center(width, fillchar)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#count-str-beg-0-end-len-string"><span class="nav-number">4.3.</span> <span class="nav-text">count(str, beg= 0,end=len(string))</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bytes-decode-encoding-”utf-8”-errors-”strict”"><span class="nav-number">4.4.</span> <span class="nav-text">bytes.decode(encoding=”utf-8”, errors=”strict”)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#encode-encoding-’UTF-8’-errors-’strict’"><span class="nav-number">4.5.</span> <span class="nav-text">encode(encoding=’UTF-8’,errors=’strict’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#endswith-suffix-beg-0-end-len-string"><span class="nav-number">4.6.</span> <span class="nav-text">endswith(suffix, beg=0, end=len(string))</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#expandtabs-tabsize-8"><span class="nav-number">4.7.</span> <span class="nav-text">expandtabs(tabsize=8)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-str-beg-0-end-len-string"><span class="nav-number">4.8.</span> <span class="nav-text">find(str, beg=0 end=len(string))</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#index-str-beg-0-end-len-string"><span class="nav-number">4.9.</span> <span class="nav-text">index(str, beg=0, end=len(string))</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isalnum"><span class="nav-number">4.10.</span> <span class="nav-text">isalnum()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isalpha"><span class="nav-number">4.11.</span> <span class="nav-text">isalpha()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isdigit"><span class="nav-number">4.12.</span> <span class="nav-text">isdigit()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#islower"><span class="nav-number">4.13.</span> <span class="nav-text">islower()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isnumeric"><span class="nav-number">4.14.</span> <span class="nav-text">isnumeric()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isspace"><span class="nav-number">4.15.</span> <span class="nav-text">isspace()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#istitle"><span class="nav-number">4.16.</span> <span class="nav-text">istitle()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isupper"><span class="nav-number">4.17.</span> <span class="nav-text">isupper()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#join-seq"><span class="nav-number">4.18.</span> <span class="nav-text">join(seq)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#len-string"><span class="nav-number">4.19.</span> <span class="nav-text">len(string)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ljust-width-fillchar"><span class="nav-number">4.20.</span> <span class="nav-text">ljust(width[, fillchar])</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lower"><span class="nav-number">4.21.</span> <span class="nav-text">lower()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lstrip"><span class="nav-number">4.22.</span> <span class="nav-text">lstrip()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#maketrans"><span class="nav-number">4.23.</span> <span class="nav-text">maketrans()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max-str"><span class="nav-number">4.24.</span> <span class="nav-text">max(str)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#min-str"><span class="nav-number">4.25.</span> <span class="nav-text">min(str)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#replace-old-new-max"><span class="nav-number">4.26.</span> <span class="nav-text">replace(old, new [, max])</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rfind-str-beg-0-end-len-string"><span class="nav-number">4.27.</span> <span class="nav-text">rfind(str, beg=0,end=len(string))</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rindex-str-beg-0-end-len-string"><span class="nav-number">4.28.</span> <span class="nav-text">rindex( str, beg=0, end=len(string))</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rjust-width-fillchar"><span class="nav-number">4.29.</span> <span class="nav-text">rjust(width,[, fillchar])</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rstrip"><span class="nav-number">4.30.</span> <span class="nav-text">rstrip()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#split-str-””-num-string-count-str"><span class="nav-number">4.31.</span> <span class="nav-text">split(str=””, num=string.count(str))</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#splitlines-keepends"><span class="nav-number">4.32.</span> <span class="nav-text">splitlines([keepends])</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#startswith-str-beg-0-end-len-string"><span class="nav-number">4.33.</span> <span class="nav-text">startswith(str, beg=0,end=len(string))</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#strip-chars"><span class="nav-number">4.34.</span> <span class="nav-text">strip([chars])</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swapcase"><span class="nav-number">4.35.</span> <span class="nav-text">swapcase()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#title"><span class="nav-number">4.36.</span> <span class="nav-text">title()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#translate-table-deletechars-””"><span class="nav-number">4.37.</span> <span class="nav-text">translate(table, deletechars=””)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#upper"><span class="nav-number">4.38.</span> <span class="nav-text">upper()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zfill-width"><span class="nav-number">4.39.</span> <span class="nav-text">zfill (width)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isdecimal"><span class="nav-number">4.40.</span> <span class="nav-text">isdecimal()</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

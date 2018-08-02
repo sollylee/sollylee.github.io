@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LISILE&#39;s Notes">
 <meta property="og:description" content="Python基础语法与数据类型">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-02T07:02:57.105Z">
+<meta property="og:updated_time" content="2018-08-02T07:19:38.434Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习(一)">
 <meta name="twitter:description" content="Python基础语法与数据类型">
@@ -357,27 +357,21 @@
 
       
         <p>Python基础语法与数据类型<br><a id="more"></a></p>
-<p>#python基本语法</p>
-<p>##注释</p>
-<pre><code># 单行注释
+<h1 id="python基本语法"><a href="#python基本语法" class="headerlink" title="python基本语法"></a>python基本语法</h1><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><pre><code># 单行注释
 &quot;&quot;&quot;&quot;&quot;&quot; 或 &apos;&apos;&apos;&apos;&apos;&apos; 多行注释
-</code></pre><p>##逻辑运算</p>
-<pre><code>and        x and y    (同&amp;&amp;)
+</code></pre><h2 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h2><pre><code>and        x and y    (同&amp;&amp;)
 
 or        x or y    (同||)
 
 not        not x    (同!)
-</code></pre><p>##成员运算</p>
-<pre><code>in            x in y
+</code></pre><h2 id="成员运算"><a href="#成员运算" class="headerlink" title="成员运算"></a>成员运算</h2><pre><code>in            x in y
 not in        x not in y
-</code></pre><p>##身份运算</p>
-<pre><code>is            判断两个标识符是不是引用自同一个对象
+</code></pre><h2 id="身份运算"><a href="#身份运算" class="headerlink" title="身份运算"></a>身份运算</h2><pre><code>is            判断两个标识符是不是引用自同一个对象
 not is        与 is 相反
 id()         用于获取对象的内存地址
 注: ==         判断引用变量的值是否相等
-</code></pre><p>##语法知识</p>
-<p>1.python可以在同一行中使用多条语句,语句间用分号(;)分割<br>2.print默认输出是换行的, 如果要是实现不换行要在变量末尾<br>  加上 end=””<br>3.python可以用斜杠()将一行的语句分成多行,在[], {},<br>  或()中的多行语句，不需要使用反斜杠()</p>
-<p>##import与from…import<br>导入相应的模块</p>
+</code></pre><h2 id="语法知识"><a href="#语法知识" class="headerlink" title="语法知识"></a>语法知识</h2><p>1.python可以在同一行中使用多条语句,语句间用分号(;)分割<br>2.print默认输出是换行的, 如果要是实现不换行要在变量末尾<br>  加上 end=””<br>3.python可以用斜杠()将一行的语句分成多行,在[], {},<br>  或()中的多行语句，不需要使用反斜杠()</p>
+<h2 id="import与from…import"><a href="#import与from…import" class="headerlink" title="import与from…import"></a>import与from…import</h2><p>导入相应的模块</p>
 <p>语法:</p>
 <pre><code>import somemodule        将整个模块(somemodule)导入
 
@@ -388,11 +382,10 @@ from somemodule import firstfunc,         从某个模块中
 secondfunc, thirdfunc                    导入多个函数
 
 from somemodule import *    将某个模块中的全部函数导入    
-</code></pre><p>#基本数据类型</p>
-<p>不可变:    Number(数字), String(字符串), Tuple(元组)</p>
+</code></pre><h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><p>不可变:    Number(数字), String(字符串), Tuple(元组)</p>
 <p>可变: List(集合), Dictionary(字典), Sets(集合)</p>
 <p>type()函数可以查询变量所指的对象类型</p>
-<p>##Number<br>声明: int, float, bool, complex(复数)<br>Python3中, 只有一个整数类型, 表示为长整型</p>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><p>声明: int, float, bool, complex(复数)<br>Python3中, 只有一个整数类型, 表示为长整型</p>
 <p>isinstance()函数用来判断变量类型</p>
 <pre><code>isinstance(var, class)        函数用来判断变量类型
                             是返回True, 否返回False
@@ -410,8 +403,7 @@ a**b    # 乘方, a^b
 <p>1.一个变量可以通过赋值指向不同类型的对象</p>
 <p>2.混合计算时, Python会把整型转换成浮点型</p>
 <p>3.复数, 用a+bj或complex(a,b)表示,<br>  复数的实虚部都是浮点型</p>
-<p>##String</p>
-<p>Python中的字符串用单引号 ‘ 或双引号 “ 括起来，<br>同时使用反斜杠 \ 转义特殊字符。</p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>Python中的字符串用单引号 ‘ 或双引号 “ 括起来，<br>同时使用反斜杠 \ 转义特殊字符。</p>
 <p>字符串的截取的语法格式如下：</p>
 <pre><code>变量[头下标:尾下标]
 </code></pre><p>索引值以 0 为开始值，-1 为从末尾的开始位置。<br>加号 + 是字符串的连接符,<br>星号 * 表示复制当前字符串，紧跟的数字为复制的次数</p>
@@ -430,8 +422,7 @@ print (str + &quot;TEST&quot;) # 连接字符串
 </code></pre><p>反斜杠()也可以作为续行符，表示下一行是上一行的延续。<br>也可以使用 “””…””” 或者 ‘’’…’’’ 跨越多行</p>
 <p>注意：</p>
 <p>1.反斜杠可以用来转义，使用r可以让反斜杠不发生转义。<br>2.字符串可以用+运算符连接在一起，用 * 运算符重复。<br>3.Python中的字符串有两种索引方式,从左往右以0开始,从右往左以-1开始<br>4.Python中的字符串不能改变。<br>5.Python中没有单独的字符类型，一个字符就是长度为1的字符串</p>
-<p>##Set</p>
-<p>1.集合是一个无序不重复元素的序列<br>2.主要用于进行成员关系测试和删除重复元素<br>3.可用大括号{}或set()函数创建集合<br>  注意,创建一个空集合必须使用set(),空的{}<br>  用于创建空字典</p>
+<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><p>1.集合是一个无序不重复元素的序列<br>2.主要用于进行成员关系测试和删除重复元素<br>3.可用大括号{}或set()函数创建集合<br>  注意,创建一个空集合必须使用set(),空的{}<br>  用于创建空字典</p>
 <p>e.g: parame = {value1, value2, ….} 或 set(value)</p>
 <p>4.输出集合是,重复的元素会被自动去掉</p>
 <p>成员测试</p>
@@ -449,13 +440,11 @@ a &amp; b         # a和b的交集
 a ^ b        # a和b中不同时存在的元素
 
 注意: - 不等于 ^
-</code></pre><p>##List</p>
-<p>1.List写在方括号[]内, 元素用逗号隔开, eg: List = [1, 2, 3,…]</p>
+</code></pre><h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p>1.List写在方括号[]内, 元素用逗号隔开, eg: List = [1, 2, 3,…]</p>
 <p>2.List中的元素类型可以不同, 它支持数字, 字符串, 列表(嵌套)</p>
 <p>3.和字符串类似, List也可以截取, 索引值与字符串相同<br>  变量[头下标:尾下标], (+)拼接, ( * )重复输出</p>
 <p>4.List中的元素可以被修改</p>
-<p>##Tuple</p>
-<p>1.与List相似, 元素类型可以不同, 不过元素不可以被修改<br>  但可以包含可被修改的元素</p>
+<h2 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h2><p>1.与List相似, 元素类型可以不同, 不过元素不可以被修改<br>  但可以包含可被修改的元素</p>
 <p>2.元组写在()小括号内, 元素间用逗号隔开</p>
 <p>3.字符串可以看作是一个特殊的元组, 方法相同</p>
 <p>4.特殊的构造语法:</p>
@@ -463,8 +452,7 @@ a ^ b        # a和b中不同时存在的元素
 
 tuple2 = (20,)        # 一个元素的元组, 需在元素后添加逗号
 </code></pre><p>String, List和Tuple都属于sequence(序列)</p>
-<p>##Dictionary</p>
-<p>1.字典是无序的对象集合, 列表是有序的对象集合,<br>二者区别: 字典元素是通过健来存取,而不是通过偏移存取</p>
+<h2 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h2><p>1.字典是无序的对象集合, 列表是有序的对象集合,<br>二者区别: 字典元素是通过健来存取,而不是通过偏移存取</p>
 <p>2.字典是一种映射类型, 字典用{}标识,<br>它是一个无序的键(key):值(value)对集合</p>
 <p>3.键(key)必须使用不可变类型<br>4.同一字典中, 键(key)必须是唯一的</p>
 <p>E.g.:</p>
@@ -491,8 +479,7 @@ dict(Runoob=1, Google=2, Taobao=3)
 <pre><code>for key, value in obj.items():
 </code></pre><p>8.去掉重复值</p>
 <pre><code>set(obj.values())
-</code></pre><p>##拓展</p>
-<p>1.当函数返回多个值时, 是以元组方式返回的</p>
+</code></pre><h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>1.当函数返回多个值时, 是以元组方式返回的</p>
 <p>2.字典是使用了散列表(hashtable)算法</p>
 <p>3.如果一个字典对象作为for的迭代对象, 那么这个操作<br>  将会遍历字典所有的键</p>
 <p>4.isinstance主要用于判断A类是否继承与B类</p>
@@ -571,8 +558,8 @@ operator.lt(x, y)    # less than (x&lt;y?)
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/sollylee.github.io/2018/07/31/JQ基础学习二/" rel="prev" title="JQ基础学习二">
-                JQ基础学习二 <i class="fa fa-chevron-right"></i>
+              <a href="/sollylee.github.io/2018/07/31/JQ基础学习二/" rel="prev" title="JQ基础学习(二)">
+                JQ基础学习(二) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -625,8 +612,17 @@ operator.lt(x, y)    # less than (x&lt;y?)
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -723,6 +719,22 @@ operator.lt(x, y)    # less than (x&lt;y?)
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python基本语法"><span class="nav-number">1.</span> <span class="nav-text">python基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">1.1.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑运算"><span class="nav-number">1.2.</span> <span class="nav-text">逻辑运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#成员运算"><span class="nav-number">1.3.</span> <span class="nav-text">成员运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#身份运算"><span class="nav-number">1.4.</span> <span class="nav-text">身份运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语法知识"><span class="nav-number">1.5.</span> <span class="nav-text">语法知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#import与from…import"><span class="nav-number">1.6.</span> <span class="nav-text">import与from…import</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本数据类型"><span class="nav-number">2.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Number"><span class="nav-number">2.1.</span> <span class="nav-text">Number</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String"><span class="nav-number">2.2.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set"><span class="nav-number">2.3.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List"><span class="nav-number">2.4.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tuple"><span class="nav-number">2.5.</span> <span class="nav-text">Tuple</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dictionary"><span class="nav-number">2.6.</span> <span class="nav-text">Dictionary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拓展"><span class="nav-number">2.7.</span> <span class="nav-text">拓展</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
